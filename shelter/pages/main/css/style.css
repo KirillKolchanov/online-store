@@ -1,0 +1,28 @@
+@import url("../../../css/reset.css");
+@import url("./start-page.css");
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1280px;
+  /* border: 1px solid black; */
+}
+
+h1 {
+  font-size: 44px;
+  font-family: Georgia;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 57.2px;
+}
+
+h3 {
+  font-size: 32px;
+  font-family: Georgia;
+  font-weight: 400;
+}
+
+p {
+  font-size: 15px;
+  font-family: Arial;
+  font-weight: 400;
+}
