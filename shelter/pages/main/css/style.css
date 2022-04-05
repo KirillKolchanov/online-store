@@ -1,11 +1,12 @@
 @import url("../../../css/reset.css");
 @import url("./start-page.css");
 @import url("./about-page.css");
+@import url("./pets-page.css");
 
 .wrapper {
   margin: 0 auto;
   max-width: 1280px;
-  /* border: 1px solid black; */
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 h1 {
@@ -26,6 +27,12 @@ h3 {
   font-size: 32px;
   font-family: Georgia;
   font-weight: 400;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: Georgia;
 }
 
 p {
