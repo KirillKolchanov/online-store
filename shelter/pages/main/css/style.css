@@ -4,6 +4,7 @@
 @import url("./pets-page.css");
 @import url("./help-page.css");
 @import url("./donation-page.css");
+@import url("./footer.css");
 
 .wrapper {
   margin: 0 auto;
@@ -20,9 +21,9 @@ h1 {
 }
 
 h2 {
+  font-size: 35px;
   font-family: Georgia;
   font-weight: 400;
-  font-size: 35px;
 }
 
 h3 {
