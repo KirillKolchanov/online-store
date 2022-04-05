@@ -1,5 +1,6 @@
 @import url("../../../css/reset.css");
 @import url("./start-page.css");
+@import url("./about-page.css");
 
 .wrapper {
   margin: 0 auto;
@@ -13,6 +14,12 @@ h1 {
   font-weight: 400;
   color: #FFFFFF;
   line-height: 57.2px;
+}
+
+h2 {
+  font-family: Georgia;
+  font-weight: 400;
+  font-size: 35px;
 }
 
 h3 {

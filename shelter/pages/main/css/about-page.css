@@ -1,0 +1,22 @@
+.about-page {
+  padding: 80px 175px 100px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid red;
+}
+
+.about-text {
+  max-width: 430px;
+}
+
+.about-title {
+  color: #545454;
+  line-height: 45.5px;
+  letter-spacing: 3px;
+}
+
+.text-description {
+  color: #4C4C4C;
+  margin-top: 25px;
+  line-height: 24px;
+}
