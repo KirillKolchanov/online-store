@@ -2,6 +2,7 @@
 @import url("./start-page.css");
 @import url("./about-page.css");
 @import url("./pets-page.css");
+@import url("./help-page.css");
 
 .wrapper {
   margin: 0 auto;

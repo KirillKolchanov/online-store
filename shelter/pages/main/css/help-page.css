@@ -1,0 +1,42 @@
+.help-page {
+  background-color: #FFFFFF;
+  padding: 80px 127px 100px;
+}
+
+.help-title {
+  color: #545454;
+  letter-spacing: 2px;
+  line-height: 45.5px;
+  text-align: center;
+}
+
+.help-list-top {
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.help-list-down {
+  margin-top: 55px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.help-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.help-list-img {
+  width: 60px;
+  height: 60px;
+}
+
+.help-list-text {
+  margin-top: 30px;
+  color: #545454;
+  letter-spacing: 1px;
+}
