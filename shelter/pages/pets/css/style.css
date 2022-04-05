@@ -1,0 +1,40 @@
+@import url("../../../css/reset.css");
+@import url("./header-page.css");
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1280px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+h1 {
+  font-size: 44px;
+  font-family: Georgia;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 57.2px;
+}
+
+h2 {
+  font-size: 35px;
+  font-family: Georgia;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 32px;
+  font-family: Georgia;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: Georgia;
+}
+
+p {
+  font-size: 15px;
+  font-family: Arial;
+  font-weight: 400;
+}
