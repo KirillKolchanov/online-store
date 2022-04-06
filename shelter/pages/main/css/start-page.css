@@ -9,7 +9,7 @@ header {
   justify-content: space-between;
 }
 
-.logo {
+.header-logo {
   text-decoration: none;
 }
 
@@ -56,6 +56,7 @@ nav {
 .start-content {
   margin-top: 60px;
   display: flex;
+  justify-content: space-between;
 }
 
 .content-text {
