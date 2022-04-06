@@ -63,7 +63,6 @@
   display: flex;
   justify-content: space-around;
   width: 340px;
-
 }
 
 .pets-nav-button {
@@ -72,9 +71,21 @@
   border-radius: 100px;
   border: 2px solid #CDCDCD;
   background-color: #FAFAFA;
+  color: #CDCDCD;
 }
 
 .pets-nav-button-text {
   color: #292929;
   line-height: 23px;
+  color: #CDCDCD;
+}
+
+.pets-nav-button:hover {
+  background-color: #FDDCC4;
+  color: #292929;
+  cursor: pointer;
+}
+
+.pets-nav-button:hover .pets-nav-button-text {
+  color: #292929;
 }
