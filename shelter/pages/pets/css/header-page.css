@@ -1,6 +1,9 @@
 header {
   padding: 30px 30px;
   background-color: #fafafa;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 .header-content {
@@ -27,7 +30,8 @@ header {
   font-size: 13px;
   color: #292929;
   margin-top: 10px;
-  letter-spacing: 1.5px;
+  letter-spacing: 0.1em;
+  margin-left: 4px;
 }
 
 nav {
@@ -49,7 +53,7 @@ nav {
   color: #292929;
 }
 
-.nav-text:active {
+.nav-text.active {
   color: #292929;
   text-decoration: underline;
   text-decoration-color: #F1CDB3;

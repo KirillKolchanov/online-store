@@ -34,3 +34,7 @@ footer {
 .footer-text-icon {
   margin-right: 20px;
 }
+
+.contact-links {
+  text-decoration: none;
+}

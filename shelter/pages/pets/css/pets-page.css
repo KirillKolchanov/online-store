@@ -27,6 +27,18 @@
   border-radius: 9px;
   margin-bottom: 30px;
 }
+.pet-card:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  background-color: #FFFFFF;
+}
+
+.pet-card:hover .pet-card-button {
+  background-color: #FDDCC4;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
 .pet-card-title {
   text-align: center;
@@ -53,11 +65,6 @@
   letter-spacing: 1px;
 }
 
-.pet-card-button:hover {
-  background-color: #FDDCC4;
-  cursor: pointer;
-}
-
 .pets-navigation {
   margin: 30px auto 0;
   display: flex;
@@ -74,16 +81,26 @@
   color: #CDCDCD;
 }
 
+.pets-nav-number {
+  background-color: #F1CDB3;
+  border: none;
+}
+
 .pets-nav-button-text {
   color: #292929;
   line-height: 23px;
-  color: #CDCDCD;
 }
 
 .pets-nav-button:hover {
   background-color: #FDDCC4;
   color: #292929;
   cursor: pointer;
+  border: none;
+}
+
+.pets-nav-number:hover {
+  background-color: #F1CDB3;
+  cursor: default;
 }
 
 .pets-nav-button:hover .pets-nav-button-text {

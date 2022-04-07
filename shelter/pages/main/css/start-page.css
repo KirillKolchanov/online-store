@@ -24,6 +24,7 @@ header {
   color: #FFFFFF;
   margin-top: 10px;
   letter-spacing: 1.5px;
+  margin-left: 4px;
 }
 
 nav {
@@ -84,6 +85,7 @@ nav {
   border-radius: 100px;
   background-color: #F1CDB3;
   margin-top: 42px;
+  border: none;
 }
 
 .content-button:hover {

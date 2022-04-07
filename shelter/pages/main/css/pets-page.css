@@ -26,6 +26,20 @@
   border-radius: 9px;
 }
 
+.pet-card:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  background-color: #FFFFFF;
+}
+
+.pet-card:hover .pet-card-button {
+  background-color: #FDDCC4;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
 .pet-card-title {
   text-align: center;
   color: #545454;
@@ -51,10 +65,10 @@
   letter-spacing: 1px;
 }
 
-.pet-card-button:hover {
+/* .pet-card-button:hover {
   background-color: #FDDCC4;
   cursor: pointer;
-}
+} */
 
 .pet-content-arrow {
   width: 52px;
