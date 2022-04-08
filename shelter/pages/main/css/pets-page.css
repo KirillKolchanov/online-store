@@ -1,5 +1,5 @@
 .pets-page {
-  padding: 80px 0px 100px;
+  padding: 80px 40px 100px;
   background-color: #F6F6F6;
 }
 
@@ -65,22 +65,21 @@
   letter-spacing: 1px;
 }
 
-/* .pet-card-button:hover {
-  background-color: #FDDCC4;
-  cursor: pointer;
-} */
-
 .pet-content-arrow {
   width: 52px;
   height: 52px;
   border: 2px solid #F1CDB3;
   border-radius: 100px;
   background-color: #FAFAFA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .pet-content-arrow:hover {
   background-color: #FDDCC4;
   cursor: pointer;
+  border: none;
 }
 
 .pets-button-wrapper {
@@ -99,16 +98,10 @@
   font-family: Georgia;
   font-weight: 400;
   letter-spacing: 1px;
-   text-align: center;
+  text-align: center;
 }
 
 .pets-button:hover {
   background-color: #FDDCC4;
   cursor: pointer;
-}
-
-.pet-content-arrow {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }

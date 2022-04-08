@@ -42,6 +42,15 @@ nav {
   font-weight: 400;
   line-height: 24px;
 }
+
+.nav-text.active {
+  color: #FAFAFA;
+  text-decoration: underline;
+  text-decoration-color: #F1CDB3;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 3px;
+}
+
 .nav-text:hover {
   color: #FAFAFA;
 }

@@ -46,3 +46,7 @@ footer {
 .contact-links-top {
   margin-top: 34px;
 }
+
+.donation-link {
+  text-decoration: none;
+}

@@ -98,11 +98,15 @@
   border: none;
 }
 
-.pets-nav-number:hover {
-  background-color: #F1CDB3;
+.pets-nav-button.disabled:hover {
+  background-color: #FAFAFA;
+  border: 2px solid #CDCDCD;
+  color: #CDCDCD;
   cursor: default;
 }
 
-.pets-nav-button:hover .pets-nav-button-text {
+.pets-nav-number:hover {
+  background-color: #F1CDB3;
+  cursor: default;
   color: #292929;
 }
