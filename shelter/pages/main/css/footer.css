@@ -12,10 +12,6 @@ footer {
   margin-top: 16px;
 }
 
-.footer-card2 {
-  margin-left: 160px;
-}
-
 .footer-title {
   color: #FFFFFF;
   line-height: 45.5px;
@@ -45,8 +41,4 @@ footer {
 
 .contact-links-top {
   margin-top: 34px;
-}
-
-.donation-link {
-  text-decoration: none;
 }

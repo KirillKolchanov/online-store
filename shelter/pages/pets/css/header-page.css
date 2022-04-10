@@ -57,3 +57,11 @@ nav {
   text-underline-offset: 10px;
   text-decoration-thickness: 3px;
 }
+
+.nav-text:active {
+  color: #292929;
+  text-decoration: underline;
+  text-decoration-color: #F1CDB3;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 3px;
+}

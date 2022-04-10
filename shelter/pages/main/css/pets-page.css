@@ -1,4 +1,4 @@
-.pets-page {
+.pets {
   padding: 80px 40px 100px;
   background-color: #F6F6F6;
 }
@@ -15,7 +15,7 @@
 .pets-content {
   margin-top: 60px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 

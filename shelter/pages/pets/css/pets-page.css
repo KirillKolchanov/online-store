@@ -1,4 +1,4 @@
-.pets-page {
+.pets {
   padding: 80px 40px 100px;
   background-color: #F6F6F6;
 }
@@ -38,6 +38,7 @@
   background-color: #FDDCC4;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  border: none;
 }
 
 .pet-card-title {
