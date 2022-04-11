@@ -8,7 +8,6 @@
   margin: 0 auto;
   text-align: center;
   line-height: 45.5px;
-  letter-spacing: 2px;
   color: #545454;
 }
 
@@ -62,7 +61,7 @@
   text-align: center;
   padding: 15px 45px;
   background-color: white;
-  letter-spacing: 1px;
+  letter-spacing: 0.06em;
 }
 
 .pet-content-arrow {
@@ -97,7 +96,7 @@
   color: #292929;
   font-family: Georgia;
   font-weight: 400;
-  letter-spacing: 1px;
+  letter-spacing: 0.06em;
   text-align: center;
 }
 

@@ -15,7 +15,6 @@ header {
 
 .logo-title {
   color: #F1CDB3;
-  letter-spacing: 2px;
 }
 
 .logo-description {
@@ -23,7 +22,7 @@ header {
   font-size: 13px;
   color: #FFFFFF;
   margin-top: 10px;
-  letter-spacing: 1.5px;
+  letter-spacing: 0.1em;
   margin-left: 4px;
 }
 

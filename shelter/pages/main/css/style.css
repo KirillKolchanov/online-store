@@ -18,24 +18,28 @@ h1 {
   font-weight: 400;
   color: #FFFFFF;
   line-height: 57.2px;
+  letter-spacing: 0.06em;
 }
 
 h2 {
   font-size: 35px;
   font-family: Georgia;
   font-weight: 400;
+  letter-spacing: 0.06em;
 }
 
 h3 {
   font-size: 32px;
   font-family: Georgia;
   font-weight: 400;
+  letter-spacing: 0.06em;
 }
 
 h4 {
   font-size: 20px;
   font-weight: 400;
   font-family: Georgia;
+  letter-spacing: 0.06em;
 }
 
 p {

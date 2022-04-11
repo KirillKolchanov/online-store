@@ -15,7 +15,6 @@ footer {
 .footer-title {
   color: #FFFFFF;
   line-height: 45.5px;
-  letter-spacing: 2px;
 }
 
 .footer-text {
@@ -24,7 +23,6 @@ footer {
   line-height: 23px;
   display: flex;
   align-items: center;
-  letter-spacing: 1px;
 }
 
 .footer-text-icon {
