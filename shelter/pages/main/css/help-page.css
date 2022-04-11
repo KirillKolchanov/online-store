@@ -5,7 +5,6 @@
 
 .help-title {
   color: #545454;
-  letter-spacing: 2px;
   line-height: 45.5px;
   text-align: center;
 }
@@ -38,5 +37,4 @@
 .help-list-text {
   margin-top: 30px;
   color: #545454;
-  letter-spacing: 1px;
 }
