@@ -110,3 +110,8 @@
   cursor: default;
   color: #292929;
 }
+
+.pets-button-active {
+  border: 2px solid #F1CDB3;
+  color: #292929;
+}
