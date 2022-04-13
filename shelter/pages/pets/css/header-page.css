@@ -5,8 +5,8 @@ header {
   top: 0;
   z-index: 1;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  height: 60px;
 }
 
 .header-content {
@@ -19,6 +19,7 @@ header {
 
 .logo-title {
   color: #545454;
+  line-height: 35.2px;
 }
 
 .logo-description {
@@ -28,10 +29,12 @@ header {
   margin-top: 10px;
   letter-spacing: 0.1em;
   margin-left: 4px;
+  line-height: 14.95px;
 }
 
 nav {
   display: flex;
+  margin-top: 16px;
   width: 445px;
   justify-content: space-between;
   color: #CDCDCD;
