@@ -68,7 +68,7 @@
 .pets-navigation {
   margin: 30px auto 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 340px;
 }
 

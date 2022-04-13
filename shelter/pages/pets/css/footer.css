@@ -12,6 +12,10 @@ footer {
   margin-top: 16px;
 }
 
+.footer-card-right {
+  width: 302px;
+}
+
 .footer-title {
   color: #FFFFFF;
   line-height: 45.5px;
