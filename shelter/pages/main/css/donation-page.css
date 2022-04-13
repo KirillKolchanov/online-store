@@ -67,3 +67,18 @@
 .donation-link {
   text-decoration: none;
 }
+
+/*_____________________ Адаптив _____________________*/
+
+@media only screen and (max-width: 1279px) {
+  .donation {
+    padding: 80px 132px 100px 131px;
+  }
+  .donation-content {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .donation-img {
+    margin-top: 60px;
+  }
+}

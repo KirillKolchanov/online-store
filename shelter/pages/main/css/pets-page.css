@@ -110,3 +110,19 @@
   background-color: #FDDCC4;
   cursor: pointer;
 }
+
+/*_____________________ Адаптив _____________________*/
+
+@media only screen and (max-width: 1279px) {
+  .pets {
+    padding: 80px 30px 100px;
+  }
+
+  .pet-card:last-child {
+    display: none;
+  }
+
+  .pets-card-content {
+    width: 580px;
+  }
+}

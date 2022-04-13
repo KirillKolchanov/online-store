@@ -1,6 +1,6 @@
 .help {
   background-color: #FFFFFF;
-  padding: 80px 127px 100px;
+  padding: 80px 40px 100px;
 }
 
 .help-title {
@@ -9,7 +9,14 @@
   text-align: center;
 }
 
-.help-list-top {
+.help-list-content {
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* .help-list-top {
   margin-top: 60px;
   display: flex;
   flex-wrap: wrap;
@@ -21,12 +28,22 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 55px 84px 0;
-}
+} */
 
 .help-list-item {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 60px 0;
+}
+
+.help-list-item:nth-child(1) {
+  margin-left: 0px;
+  margin-bottom: 55px;
+}
+
+.help-list-item:nth-child(5) {
+  margin-right: 0px;
 }
 
 .help-list-img {
@@ -37,4 +54,33 @@
 .help-list-text {
   margin-top: 30px;
   color: #545454;
+}
+
+/*_____________________ Адаптив _____________________*/
+
+@media only screen and (max-width: 1279px) {
+  .help {
+    padding: 80px 69px 45px;
+  }
+
+  .help-list-content {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .help-list-item {
+    width: 170px;
+    margin: 0 0 55px;
+  }
+
+  .help-list-item:nth-child(1) {
+    margin-left: 0px;
+    margin-bottom: 0px;
+  }
+
+  .help-list-item:nth-child(5) {
+    margin-right: 0px;
+  }
 }

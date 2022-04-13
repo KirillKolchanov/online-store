@@ -8,6 +8,12 @@ footer {
   justify-content: space-between;
 }
 
+.footer-content-text {
+  width: 740px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .footer-card {
   margin-top: 16px;
 }
@@ -39,4 +45,28 @@ footer {
 
 .contact-links-top {
   margin-top: 34px;
+}
+
+/*_____________________ Адаптив _____________________*/
+
+@media only screen and (max-width: 1279px) {
+  footer {
+    padding: 30px 30px 0px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-content-text {
+    display: flex;
+    width: 640px;
+    justify-content: space-between;
+  }
+
+  .footer-img {
+    margin-top: 65px;
+    width: 300px;
+  }
 }
