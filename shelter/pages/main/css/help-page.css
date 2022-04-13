@@ -17,10 +17,10 @@
 }
 
 .help-list-down {
-  margin-top: 55px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin: 55px 84px 0;
 }
 
 .help-list-item {

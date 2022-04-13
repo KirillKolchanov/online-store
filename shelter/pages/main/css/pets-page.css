@@ -14,8 +14,14 @@
 .pets-content {
   margin-top: 60px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+}
+
+.pets-card-content {
+  width: 990px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .pet-card {
