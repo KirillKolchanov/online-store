@@ -20,3 +20,21 @@
   margin-top: 25px;
   line-height: 24px;
 }
+
+/*_____________________ Адаптив _____________________*/
+
+@media only screen and (max-width: 1279px) {
+  .about {
+    padding: 80px 166px 100px 165px;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .about-text {
+    margin-top: 0px;
+  }
+
+  .about-img {
+    margin-top: 80px;
+  }
+}

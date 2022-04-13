@@ -28,8 +28,8 @@ header {
 
 nav {
   display: flex;
-  width: 445px;
-  justify-content: space-around;
+  width: 443px;
+  justify-content: space-between;
   color: #CDCDCD;
 }
 
@@ -70,7 +70,7 @@ nav {
 
 .content-text {
   width: 460px;
-  margin-top: 165px;
+  margin-top: 163px;
 }
 
 .content-description {
@@ -94,9 +94,45 @@ nav {
   background-color: #F1CDB3;
   margin-top: 42px;
   border: none;
+  letter-spacing: 0.06em;
 }
 
 .content-button:hover {
   background-color: #FDDCC4;
   cursor: pointer;
+}
+
+/*_____________________ Адаптив _____________________*/
+
+@media only screen and (max-width: 1279px) {
+  .main {
+    padding: 30px 30px 0px;
+  }
+
+  .start-content {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content-text {
+    width: 460px;
+    margin-top: 0px;
+  }
+
+  .start-img {
+    width: 569px;
+    margin-top: 100px;
+    margin-left: 70px;
+  }
+
+  .content-button {
+    text-align: center;
+  }
+
+  .content-button-wrapper {
+    display: flex;
+    justify-content: center;
+  }
 }
