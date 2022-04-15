@@ -16,6 +16,7 @@ footer {
 
 .footer-card {
   margin-top: 16px;
+  width: 280px;
 }
 
 .footer-card-right {
@@ -28,11 +29,15 @@ footer {
 }
 
 .footer-text {
-  margin-top: 40px;
+  margin-top: 39px;
   color: #F1CDB3;
   line-height: 23px;
   display: flex;
   align-items: center;
+}
+
+.footer-tel-link {
+  margin-top: 40px;
 }
 
 .footer-text-icon {
@@ -43,15 +48,15 @@ footer {
   text-decoration: none;
 }
 
-.contact-links-bottom {
+.contact-links-top {
   margin-top: 32px;
 }
 
-.contact-links-top {
-  margin-top: 34px;
+.contact-links-bottom {
+  margin-top: 33px;
 }
 
-/*_____________________ Адаптив _____________________*/
+/*_____________________ Адаптив для 768px _____________________*/
 
 @media only screen and (max-width: 1279px) {
   footer {
@@ -72,5 +77,59 @@ footer {
   .footer-img {
     margin-top: 65px;
     width: 300px;
+  }
+
+  .footer-card {
+    margin-top: 0px;
+  }
+}
+
+/*_____________________ Адаптив для 320px _____________________*/
+
+@media only screen and (max-width: 767px) {
+  footer {
+    padding: 30px 10px 0px;
+  }
+
+  .footer-content-text {
+    flex-direction: column;
+    width: 300px;
+    align-items: center;
+  }
+
+  .footer-title {
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    line-height: 32.5px;
+  }
+
+  .footer-card-right {
+    margin-top: 40px;
+    width: 300px;
+  }
+
+  .footer-title-right {
+    width: 270px;
+    margin: 0 auto;
+  }
+
+  .footer-text.contact-links-top {
+    margin-top: 39px;
+    justify-content: flex-start;
+  }
+
+  .footer-text.contact-links-bottom {
+    margin-top: 40px;
+    justify-content: flex-start;
+  }
+
+  .footer-text {
+    justify-content: center;
+  }
+
+  .footer-img {
+    margin-top: 40px;
+    width: 260px;
   }
 }

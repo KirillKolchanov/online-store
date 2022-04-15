@@ -26,6 +26,10 @@ header {
   margin-left: 4px;
 }
 
+.burger-menu {
+  display: none;
+}
+
 nav {
   margin-top: 16px;
   display: flex;
@@ -103,7 +107,7 @@ nav {
   cursor: pointer;
 }
 
-/*_____________________ Адаптив _____________________*/
+/*_____________________ Адаптив для 768px _____________________*/
 
 @media only screen and (max-width: 1279px) {
   .main {
@@ -111,8 +115,6 @@ nav {
   }
 
   .start-content {
-    margin-top: 60px;
-    display: flex;
     flex-direction: column;
     align-items: center;
   }
@@ -125,7 +127,7 @@ nav {
   .start-img {
     width: 569px;
     margin-top: 100px;
-    margin-left: 70px;
+    margin-left: 138px;
   }
 
   .content-button {
@@ -135,5 +137,66 @@ nav {
   .content-button-wrapper {
     display: flex;
     justify-content: center;
+  }
+}
+
+/*_____________________ Адаптив для 320px _____________________*/
+
+@media only screen and (max-width: 767px) {
+  .main {
+    padding: 30px 10px 0px;
+  }
+
+  header {
+    width: 257px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .start-content {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 62px;
+  }
+
+  .content-text {
+    width: 300px;
+    margin-top: 0px;
+  }
+
+  .content-text h1 {
+    font-size: 25px;
+    line-height: 32.5px;
+    text-align: center;
+    letter-spacing: 0.06em;
+  }
+
+  .content-description {
+    text-align: center;
+    margin-top: 41px;
+  }
+
+  .start-img {
+    width: 260px;
+    margin-top: 105px;
+    margin-left: 40px;
+  }
+
+  .burger-menu {
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .burger-line {
+    width: 30px;
+    height: 2px;
+    background-color: #F1CDB3;
   }
 }

@@ -1,5 +1,5 @@
 .donation {
-  padding: 80px 182px 100px 183px;
+  padding: 80px 182px 101px 183px;
   background-color: #F6F6F6;
   display: flex;
   justify-content: space-between;
@@ -68,7 +68,7 @@
   text-decoration: none;
 }
 
-/*_____________________ Адаптив _____________________*/
+/*_____________________ Адаптив для 768px _____________________*/
 
 @media only screen and (max-width: 1279px) {
   .donation {
@@ -80,5 +80,47 @@
   }
   .donation-img {
     margin-top: 60px;
+  }
+}
+
+/*_____________________ Адаптив для 320px _____________________*/
+
+@media only screen and (max-width: 767px) {
+  .donation {
+    padding: 43px 10px 42px;
+  }
+
+  .donation-content {
+    width: 300px;
+    justify-content: space-between;
+  }
+
+  .donation-title {
+    font-size: 25px;
+    line-height: 32.5px;
+    text-align: center;
+  }
+
+  .donation-description {
+    letter-spacing: normal;
+    text-align: center;
+    line-height: 24px;
+  }
+
+  .donation-card {
+    font-size: 15px;
+    line-height: 16.5px;
+    margin: 20px auto;
+    align-items: center;
+  }
+
+  .donation-card-description {
+    padding: 0 10px;
+    text-align: justify;
+  }
+
+  .donation-img {
+    margin-top: 42px;
+    width: 260px;
   }
 }
