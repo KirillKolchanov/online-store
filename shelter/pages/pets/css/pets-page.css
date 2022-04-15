@@ -24,8 +24,9 @@
   background-color: #FAFAFA;
   padding-bottom: 30px;
   border-radius: 9px;
-  margin-bottom: 30px;
+  margin-bottom: 29px;
 }
+
 .pet-card:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease;
@@ -114,4 +115,77 @@
 .pets-button-active {
   border: 2px solid #F1CDB3;
   color: #292929;
+}
+
+/*_____________________ Адаптив для 768px _____________________*/
+
+@media only screen and (max-width: 1279px) {
+  .pets {
+    padding: 80px 94px 77px;
+  }
+
+  .pets-content {
+    margin-top: 27px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .pet-card:nth-child(7) {
+    display: none;
+  }
+
+  .pet-card:nth-child(8) {
+    display: none;
+  }
+
+  .pets-navigation {
+    margin-top: 11px;
+  }
+}
+
+/*_____________________ Адаптив для 320px _____________________*/
+
+@media only screen and (max-width: 767px) {
+  .pets {
+    padding: 42px 10px;
+  }
+
+  .pets-title {
+    max-width: 300px;
+    font-size: 25px;
+    line-height: 32.5px;
+  }
+
+  .pets-content {
+    margin-top: 42px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .pet-card-title {
+    margin-top: 27px;
+  }
+
+  .pet-card-button {
+    line-height: 22.1px;
+  }
+
+  .pet-card:nth-child(4) {
+    display: none;
+  }
+
+  .pet-card:nth-child(5) {
+    display: none;
+  }
+
+  .pet-card:nth-child(6) {
+    display: none;
+  }
+
+  .pets-navigation {
+    margin: 10px auto 0;
+    width: 300px;
+  }
 }

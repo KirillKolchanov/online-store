@@ -16,20 +16,6 @@
   justify-content: center;
 }
 
-/* .help-list-top {
-  margin-top: 60px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.help-list-down {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 55px 84px 0;
-} */
-
 .help-list-item {
   display: flex;
   flex-direction: column;
@@ -54,13 +40,14 @@
 .help-list-text {
   margin-top: 30px;
   color: #545454;
+  line-height: 23px;
 }
 
-/*_____________________ Адаптив _____________________*/
+/*_____________________ Адаптив для 768px _____________________*/
 
 @media only screen and (max-width: 1279px) {
   .help {
-    padding: 80px 69px 45px;
+    padding: 80px 69px 46px;
   }
 
   .help-list-content {
@@ -82,5 +69,45 @@
 
   .help-list-item:nth-child(5) {
     margin-right: 0px;
+  }
+}
+
+/*_____________________ Адаптив для 320px _____________________*/
+
+@media only screen and (max-width: 767px) {
+  .help {
+    padding: 44px 15px 42px;
+  }
+
+  .help-title {
+    font-size: 25px;
+    line-height: 32.5px;
+  }
+
+  .help-list-content {
+    margin-top: 42px;
+  }
+
+  .help-list-item {
+    width: 130px;
+    margin: 0 0 30px;
+  }
+
+  .help-list-text {
+    margin-top: 20px;
+  }
+
+  .help-list-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .help-list-item h4 {
+    font-size: 15px;
+    line-height: 16.5px;
+  }
+
+  .help-list-item:last-child {
+    margin-bottom: 0px;
   }
 }

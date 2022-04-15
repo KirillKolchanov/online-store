@@ -21,11 +21,11 @@
   line-height: 24px;
 }
 
-/*_____________________ Адаптив _____________________*/
+/*_____________________ Адаптив для 768px _____________________*/
 
 @media only screen and (max-width: 1279px) {
   .about {
-    padding: 80px 166px 100px 165px;
+    padding: 80px 166px 97px 165px;
     flex-direction: column-reverse;
     align-items: center;
   }
@@ -34,7 +34,44 @@
     margin-top: 0px;
   }
 
-  .about-img {
+  .about-img-wrapper {
     margin-top: 80px;
+  }
+}
+
+/*_____________________ Адаптив для 320px _____________________*/
+
+@media only screen and (max-width: 767px) {
+  .about {
+    padding: 42px 10px;
+  }
+
+  .about-title {
+    width: 300px;
+    font-size: 25px;
+    line-height: 32.5px;
+    text-align: center;
+  }
+
+  .about-text {
+    width: 300px;
+    margin-top: 0px;
+  }
+
+  .text-description {
+    padding: 0 15px;
+    text-align: justify;
+  }
+
+  .about-text-second {
+    margin-top: 22px;
+  }
+
+  .about-img-wrapper {
+    margin-top: 41px;
+  }
+
+  .about-img {
+    width: 260px;
   }
 }

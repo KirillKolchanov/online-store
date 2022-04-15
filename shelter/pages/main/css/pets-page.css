@@ -111,7 +111,7 @@
   cursor: pointer;
 }
 
-/*_____________________ Адаптив _____________________*/
+/*_____________________ Адаптив для 768px _____________________*/
 
 @media only screen and (max-width: 1279px) {
   .pets {
@@ -124,5 +124,51 @@
 
   .pets-card-content {
     width: 580px;
+  }
+}
+
+/*_____________________ Адаптив для 320px _____________________*/
+
+@media only screen and (max-width: 767px) {
+  .pets {
+    padding: 39px 10px 42px;
+  }
+
+  .pets-title {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 32.5px;
+    font-size: 25px;
+  }
+
+  .pets-content {
+    margin-top: 42px;
+    flex-direction: column-reverse;
+    /* align-items: center; */
+    flex-flow: wrap-reverse;
+    justify-content: center;
+  }
+
+  .pets-card-content {
+    margin: 0 auto;
+    width: 270px;
+    order: 1;
+  }
+
+  .pet-card-title {
+    margin-top: 27px;
+  }
+
+  .pet-card:nth-child(2) {
+    display: none;
+  }
+
+  .pet-content-arrow {
+    margin: 20px 40px 0px;
+  }
+
+  .pets-button {
+    margin-top: 44px;
   }
 }

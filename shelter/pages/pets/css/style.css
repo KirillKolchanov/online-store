@@ -42,3 +42,19 @@ p {
   font-family: Arial;
   font-weight: 400;
 }
+
+/*_____________________ Адаптив для 768px _____________________*/
+
+@media only screen and (max-width: 1279px) {
+  .wrapper {
+    width: 768px;
+  }
+}
+
+/*_____________________ Адаптив для 320px _____________________*/
+
+@media only screen and (max-width: 767px) {
+  .wrapper {
+    width: 320px;
+  }
+}

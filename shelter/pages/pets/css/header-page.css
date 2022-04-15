@@ -1,6 +1,6 @@
 header {
   padding: 30px 40px;
-  background-color: #fafafa;
+  background-color: #FFFFFF;
   position: sticky;
   top: 0;
   z-index: 1;
@@ -32,10 +32,14 @@ header {
   line-height: 14.95px;
 }
 
+.burger-menu {
+  display: none;
+}
+
 nav {
   display: flex;
   margin-top: 16px;
-  width: 445px;
+  width: 443px;
   justify-content: space-between;
   color: #CDCDCD;
 }
@@ -66,4 +70,40 @@ nav {
   text-decoration-color: #F1CDB3;
   text-underline-offset: 7px;
   text-decoration-thickness: 3px;
+}
+
+/*_____________________ Адаптив для 768px _____________________*/
+
+@media only screen and (max-width: 1279px) {
+  header {
+    padding: 30px 30px;
+  }
+}
+
+/*_____________________ Адаптив для 320px _____________________*/
+
+@media only screen and (max-width: 767px) {
+  header {
+    padding: 30px 50px 30px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .burger-menu {
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .burger-line {
+    width: 30px;
+    height: 2px;
+    background-color: #000000;
+  }
 }
