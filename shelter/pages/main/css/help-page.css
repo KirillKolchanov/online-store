@@ -1,6 +1,6 @@
 .help {
   background-color: #FFFFFF;
-  padding: 80px 40px 100px;
+  padding: 82px 40px 100px;
 }
 
 .help-title {
@@ -10,7 +10,7 @@
 }
 
 .help-list-content {
-  margin-top: 60px;
+  margin-top: 58px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -47,11 +47,11 @@
 
 @media only screen and (max-width: 1279px) {
   .help {
-    padding: 80px 69px 46px;
+    padding: 82px 69px 46px;
   }
 
   .help-list-content {
-    margin-top: 60px;
+    margin-top: 58px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -76,7 +76,7 @@
 
 @media only screen and (max-width: 767px) {
   .help {
-    padding: 44px 15px 42px;
+    padding: 43px 15px 42px;
   }
 
   .help-title {

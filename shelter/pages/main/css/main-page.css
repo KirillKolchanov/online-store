@@ -75,7 +75,7 @@ nav {
 
 .content-text {
   width: 460px;
-  margin-top: 163px;
+  margin-top: 165px;
 }
 
 .content-description {
@@ -117,6 +117,7 @@ nav {
   .start-content {
     flex-direction: column;
     align-items: center;
+    margin-top: 62px;
   }
 
   .content-text {
