@@ -6,6 +6,10 @@
 @import url("./donation-page.css");
 @import url("./footer.css");
 
+body {
+  overflow-x: hidden;
+}
+
 .wrapper {
   margin: 0 auto;
   width: 1280px;
