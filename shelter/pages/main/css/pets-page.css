@@ -1,5 +1,5 @@
 .pets {
-  padding: 80px 40px 100px;
+  padding: 78px 40px 100px;
   background-color: #F6F6F6;
 }
 
@@ -12,7 +12,7 @@
 }
 
 .pets-content {
-  margin-top: 60px;
+  margin-top: 57px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -115,7 +115,7 @@
 
 @media only screen and (max-width: 1279px) {
   .pets {
-    padding: 80px 30px 100px;
+    padding: 81px 30px 100px;
   }
 
   .pet-card:last-child {
@@ -124,6 +124,10 @@
 
   .pets-card-content {
     width: 580px;
+  }
+
+  .pet-card-title {
+    margin-top: 30px;
   }
 }
 
