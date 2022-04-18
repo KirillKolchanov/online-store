@@ -3,6 +3,10 @@
 @import url("./pets-page.css");
 @import url("./footer.css");
 
+body {
+  overflow-x: hidden;
+}
+
 .wrapper {
   margin: 0 auto;
   max-width: 1280px;
