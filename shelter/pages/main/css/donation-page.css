@@ -1,5 +1,5 @@
 .donation {
-  padding: 80px 182px 101px 183px;
+  padding: 82px 182px 101px 183px;
   background-color: #F6F6F6;
   display: flex;
   justify-content: space-between;
@@ -13,6 +13,7 @@
 
 .donation-img {
   margin-top: 11px;
+  height: 261px;
 }
 
 .donation-text {
@@ -87,7 +88,7 @@
 
 @media only screen and (max-width: 767px) {
   .donation {
-    padding: 42px 10px 42px;
+    padding: 44px 10px 42px;
   }
 
   .donation-content {
@@ -122,5 +123,6 @@
   .donation-img {
     margin-top: 42px;
     width: 260px;
+    height: 135.2px;
   }
 }
