@@ -117,6 +117,109 @@
   color: #292929;
 }
 
+.modal-window {
+  visibility: hidden;
+  display: flex;
+  width: 900px;
+  /* height: 500px; */
+  border-radius: 9px;
+  z-index: 10;
+  background-color: #FAFAFA;
+  position: fixed;
+  top: 20%;
+  left: 15%;
+}
+
+.modal-window_active {
+  visibility: visible;
+  z-index: 10;
+}
+
+.modal-content {
+  margin-top: 50px;
+  width: 351px;
+  margin-left: 29px;
+}
+
+.modal-img {
+  width: 500px;
+  z-index: 50;
+  border-radius: 9px;
+}
+
+.modal_type {
+  margin-top: 40px;
+}
+
+.modal-name {
+  color: #000000;
+}
+
+.modal-type {
+  color: #000000;
+}
+
+.modal-breed {
+  color: #000000;
+}
+
+.modal-description {
+  margin-top: 40px;
+  color: #000000;
+  line-height: 16.5px;
+  letter-spacing: 0.06em;
+  font-family: Georgia;
+}
+
+.modal-list {
+  margin-top: 40px;
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  list-style-image: url(../../../assets/icons/dot.png);
+}
+
+.modal-list-item {
+  margin-bottom: 10px;
+}
+
+.modal-list-title {
+  font-family: Georgia;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 16.5px;
+  letter-spacing: 0.06em;
+}
+
+.modal-list-text {
+  font-family: Georgia;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 16.5px;
+  letter-spacing: 0.06em;
+}
+
+.close-button {
+  color: #aaa;
+  font-weight: bold;
+  width: 52px;
+  height: 52px;
+  border: 2px solid #F1CDB3;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -52px;
+  left: 900px;
+}
+
+.close-button:hover {
+  cursor: pointer;
+  background-color: #FDDCC4;
+  border: 2px solid #FDDCC4;
+}
+
 /*_____________________ Адаптив для 768px _____________________*/
 
 @media only screen and (max-width: 1279px) {
@@ -129,6 +232,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  .pet-card:hover {
+    transform: scale(1.06);
   }
 
   .pet-card-title {
@@ -145,6 +252,46 @@
 
   .pets-navigation {
     margin-top: 11px;
+  }
+
+  .modal-window {
+    width: 630px;
+    /* height: 350px; */
+    top: 30%;
+    left: 9%
+  }
+
+  .modal-img {
+    width: 350px;
+  }
+
+  .modal-content {
+    margin-top: 10px;
+    width: 260px;
+    margin-left: 11px;
+  }
+
+  .modal_type {
+    margin-top: 10px;
+  }
+
+  .modal-description {
+    margin-top: 20px;
+    line-height: 14.3px;
+    font-size: 13px;
+  }
+
+  .modal-list {
+    margin-top: 20px;
+  }
+
+  .modal-list-item {
+    margin-bottom: 5px;
+  }
+
+  .close-button {
+    top: -57px;
+    left: 621px;
   }
 }
 
@@ -166,6 +313,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .pet-card:hover {
+    transform: scale(1.04);
   }
 
   .pet-card-title {
@@ -191,5 +342,48 @@
   .pets-navigation {
     margin: 10px auto 0;
     width: 300px;
+  }
+
+  .modal-window {
+    width: 240px;
+    /* height: 341px; */
+    left: 12%;
+    padding-bottom: 20px;
+  }
+
+  .modal-img {
+    display: none;
+  }
+
+  .modal-content {
+    margin-top: 10px;
+    width: 220px;
+    margin-left: 10px;
+    padding-bottom: 10px;
+  }
+
+  .modal-name {
+    text-align: center;
+  }
+
+  .modal_type {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .modal-breed {
+    color: #000000;
+  }
+
+  .modal-description {
+    margin-top: 20px;
+    line-height: 14.3px;
+    font-size: 13px;
+    text-align: justify;
+  }
+
+  .close-button {
+    top: -57px;
+    left: 215px;
   }
 }
