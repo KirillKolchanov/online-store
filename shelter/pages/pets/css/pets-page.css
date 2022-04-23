@@ -1,5 +1,5 @@
 .pets {
-  padding: 80px 40px 100px;
+  padding: 80px 0 100px;
   background-color: #F6F6F6;
 }
 
@@ -17,6 +17,8 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+
+  transition: all 0.5s ease;
 }
 
 .pet-card {
@@ -121,13 +123,17 @@
   visibility: hidden;
   display: flex;
   width: 900px;
-  /* height: 500px; */
+  height: 500px;
   border-radius: 9px;
   z-index: 10;
   background-color: #FAFAFA;
+
   position: fixed;
-  top: 20%;
-  left: 15%;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
 }
 
 .modal-window_active {
@@ -220,11 +226,47 @@
   border: 2px solid #FDDCC4;
 }
 
+/* Реализация пагинации */
+
+.all-pets-content {
+  display: flex;
+  position: relative;
+  left: 0;
+  width: 1280px;
+  overflow: hidden;
+}
+
+.card.wrapper {
+  display: flex;
+  position: relative;
+  left: 0;
+  transition: 0.5s;
+}
+
+.pets-content {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  left: 0;
+  margin: 45px 0;
+  width: 1280px;
+}
+
+.pet-card {
+  width: 270px;
+  background-color: #FAFAFA;
+  padding-bottom: 30px;
+  border-radius: 9px;
+  margin: 15px 20px;
+}
+
+
 /*_____________________ Адаптив для 768px _____________________*/
 
 @media only screen and (max-width: 1279px) {
   .pets {
-    padding: 80px 94px 77px;
+    padding: 80px 0px 77px;
   }
 
   .pets-content {
@@ -251,14 +293,12 @@
   }
 
   .pets-navigation {
-    margin-top: 11px;
+    margin-top: 0px;
   }
 
   .modal-window {
     width: 630px;
-    /* height: 350px; */
-    top: 30%;
-    left: 9%
+    height: 350px;
   }
 
   .modal-img {
@@ -293,6 +333,29 @@
     top: -57px;
     left: 621px;
   }
+
+  /* Реализация пагинации для 768px*/
+
+  .all-pets-content {
+    display: flex;
+    position: relative;
+    left: 0;
+    width: 768px;
+    overflow: hidden;
+  }
+
+  .pets-content {
+    flex-wrap: wrap;
+    justify-content: center;
+    left: 0;
+    margin: 30px 0 40px;
+    width: 768px;
+  }
+
+  .pet-card {
+    margin: 15px 20px;
+  }
+
 }
 
 /*_____________________ Адаптив для 320px _____________________*/
@@ -306,6 +369,10 @@
     max-width: 300px;
     font-size: 25px;
     line-height: 32.5px;
+  }
+
+  .all-pets-content {
+    display: none;
   }
 
   .pets-content {
@@ -347,8 +414,9 @@
   .modal-window {
     width: 240px;
     /* height: 341px; */
-    left: 12%;
     padding-bottom: 20px;
+
+    transform: translate(-50%, -50%);
   }
 
   .modal-img {

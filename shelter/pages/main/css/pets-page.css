@@ -120,7 +120,7 @@
   z-index: 10;
   background-color: #FAFAFA;
 
-  position: absolute;
+  position: fixed;
 
   top: 50%;
   left: 50%;
@@ -328,7 +328,7 @@
 
   .modal-window {
     width: 240px;
-    transform: translate(-50%, -70%);
+    transform: translate(-50%, -50%);
     /* height: 341px; */
     padding-bottom: 20px;
   }

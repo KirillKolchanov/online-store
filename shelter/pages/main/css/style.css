@@ -57,7 +57,7 @@ p {
 
 .opacity-window {
   visibility: hidden;
-  background: rgba(41, 41, 41, 0.6);;
+  background: rgba(41, 41, 41, 0.6);
   position: fixed;
   left: 0;
   top: 0;
