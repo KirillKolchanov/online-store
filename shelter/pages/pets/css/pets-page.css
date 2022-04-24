@@ -12,11 +12,8 @@
 }
 
 .pets-content {
-  margin-top: 60px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
 
   transition: all 0.5s ease;
 }
@@ -236,22 +233,21 @@
   overflow: hidden;
 }
 
-.card.wrapper {
+/* .cards-wrapper {
   display: flex;
   position: relative;
   left: 0;
   transition: 0.5s;
-}
+} */
 
 .pets-content {
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   left: 0;
   margin: 45px 0;
   width: 1280px;
 }
+
 
 .pet-card {
   width: 270px;
@@ -267,13 +263,6 @@
 @media only screen and (max-width: 1279px) {
   .pets {
     padding: 80px 0px 77px;
-  }
-
-  .pets-content {
-    margin-top: 27px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
   }
 
   .pet-card:hover {
@@ -337,25 +326,18 @@
   /* Реализация пагинации для 768px*/
 
   .all-pets-content {
-    display: flex;
-    position: relative;
-    left: 0;
     width: 768px;
-    overflow: hidden;
   }
 
   .pets-content {
-    flex-wrap: wrap;
-    justify-content: center;
-    left: 0;
     margin: 30px 0 40px;
     width: 768px;
+    justify-content: center;
   }
 
   .pet-card {
     margin: 15px 20px;
   }
-
 }
 
 /*_____________________ Адаптив для 320px _____________________*/
@@ -369,17 +351,6 @@
     max-width: 300px;
     font-size: 25px;
     line-height: 32.5px;
-  }
-
-  .all-pets-content {
-    display: none;
-  }
-
-  .pets-content {
-    margin-top: 42px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
   }
 
   .pet-card:hover {
@@ -413,9 +384,8 @@
 
   .modal-window {
     width: 240px;
-    /* height: 341px; */
     padding-bottom: 20px;
-
+    height: auto;
     transform: translate(-50%, -50%);
   }
 
@@ -427,7 +397,7 @@
     margin-top: 10px;
     width: 220px;
     margin-left: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
   }
 
   .modal-name {
@@ -453,5 +423,20 @@
   .close-button {
     top: -57px;
     left: 215px;
+  }
+
+  /* Реализация пагинации для 320px*/
+
+  .all-pets-content {
+    width: 320px;
+  }
+
+  .pets-content {
+    margin: 42px 0;
+    width: 320px;
+  }
+
+  .pet-card {
+    margin: 15px 0px;
   }
 }

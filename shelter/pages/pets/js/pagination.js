@@ -76,6 +76,7 @@ const paginationEngine = () => {
   let sliderOffset = 0;
   let currentSlide = 1;
 
+  /* Реализация пагинации для всех разрешений */
 arrowRight.addEventListener('click', function() {
   /* Для разрешения 1280 */
   if (document.documentElement.clientWidth >= 1280){
@@ -88,6 +89,11 @@ arrowRight.addEventListener('click', function() {
     currentSlide += 1;
   }
 
+  /* Для разрешения 320 */
+  if (document.documentElement.clientWidth < 768){
+    sliderOffset = sliderOffset - 320
+    currentSlide += 1;
+  }
 
   petsContentArr.forEach((el) => {
     el.style.left = `${sliderOffset}px`;
@@ -118,6 +124,11 @@ twoArrowRight.addEventListener('click', function() {
     sliderOffset = -3840;
     currentSlide = 6;
   }
+  /* Для разрешения 320 */
+  if (document.documentElement.clientWidth < 768){
+    sliderOffset = -1600;
+    currentSlide = 6;
+  }
 
 
   petsContentArr.forEach((el) => {
@@ -141,6 +152,11 @@ arrowLeft.addEventListener('click', function() {
   /* Для разрешения 768 */
   if (document.documentElement.clientWidth < 1280 && document.documentElement.clientWidth >= 768){
     sliderOffset = sliderOffset + 768
+    currentSlide -= 1;
+  }
+  /* Для разрешения 320 */
+  if (document.documentElement.clientWidth < 768){
+    sliderOffset = sliderOffset + 320
     currentSlide -= 1;
   }
 
@@ -172,6 +188,11 @@ twoArrowLeft.addEventListener('click', function() {
   }
   /* Для разрешения 768 */
   if (document.documentElement.clientWidth < 1280 && document.documentElement.clientWidth >= 768){
+    sliderOffset = 0;
+    currentSlide = 1;
+  }
+  /* Для разрешения 768 */
+  if (document.documentElement.clientWidth < 768){
     sliderOffset = 0;
     currentSlide = 1;
   }
