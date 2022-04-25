@@ -1,5 +1,5 @@
 .pets {
-  padding: 80px 40px 100px;
+  padding: 80px 0 100px;
   background-color: #F6F6F6;
 }
 
@@ -12,11 +12,10 @@
 }
 
 .pets-content {
-  margin-top: 60px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+
+  transition: all 0.5s ease;
 }
 
 .pet-card {
@@ -117,18 +116,150 @@
   color: #292929;
 }
 
+.modal-window {
+  visibility: hidden;
+  display: flex;
+  width: 900px;
+  height: 500px;
+  border-radius: 9px;
+  z-index: 10;
+  background-color: #FAFAFA;
+
+  position: fixed;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.modal-window_active {
+  visibility: visible;
+  z-index: 10;
+}
+
+.modal-content {
+  margin-top: 50px;
+  width: 351px;
+  margin-left: 29px;
+}
+
+.modal-img {
+  width: 500px;
+  z-index: 50;
+  border-radius: 9px;
+}
+
+.modal_type {
+  margin-top: 40px;
+}
+
+.modal-name {
+  color: #000000;
+}
+
+.modal-type {
+  color: #000000;
+}
+
+.modal-breed {
+  color: #000000;
+}
+
+.modal-description {
+  margin-top: 40px;
+  color: #000000;
+  line-height: 16.5px;
+  letter-spacing: 0.06em;
+  font-family: Georgia;
+}
+
+.modal-list {
+  margin-top: 40px;
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  list-style-image: url(../../../assets/icons/dot.png);
+}
+
+.modal-list-item {
+  margin-bottom: 10px;
+}
+
+.modal-list-title {
+  font-family: Georgia;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 16.5px;
+  letter-spacing: 0.06em;
+}
+
+.modal-list-text {
+  font-family: Georgia;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 16.5px;
+  letter-spacing: 0.06em;
+}
+
+.close-button {
+  color: #aaa;
+  font-weight: bold;
+  width: 52px;
+  height: 52px;
+  border: 2px solid #F1CDB3;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -52px;
+  left: 900px;
+}
+
+.close-button:hover {
+  cursor: pointer;
+  background-color: #FDDCC4;
+  border: 2px solid #FDDCC4;
+}
+
+/* Реализация пагинации */
+
+.all-pets-content {
+  display: flex;
+  position: relative;
+  left: 0;
+  width: 1280px;
+  overflow: hidden;
+}
+
+.pets-content {
+  position: relative;
+  justify-content: center;
+  left: 0;
+  margin: 45px 0;
+  width: 1280px;
+}
+
+
+.pet-card {
+  width: 270px;
+  background-color: #FAFAFA;
+  padding-bottom: 30px;
+  border-radius: 9px;
+  margin: 15px 20px;
+}
+
+
 /*_____________________ Адаптив для 768px _____________________*/
 
 @media only screen and (max-width: 1279px) {
   .pets {
-    padding: 80px 94px 77px;
+    padding: 80px 0px 77px;
   }
 
-  .pets-content {
-    margin-top: 27px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  .pet-card:hover {
+    transform: scale(1.06);
   }
 
   .pet-card-title {
@@ -144,7 +275,61 @@
   }
 
   .pets-navigation {
-    margin-top: 11px;
+    margin-top: 0px;
+  }
+
+  .modal-window {
+    width: 630px;
+    height: 350px;
+  }
+
+  .modal-img {
+    width: 350px;
+  }
+
+  .modal-content {
+    margin-top: 10px;
+    width: 260px;
+    margin-left: 11px;
+  }
+
+  .modal_type {
+    margin-top: 10px;
+  }
+
+  .modal-description {
+    margin-top: 20px;
+    line-height: 14.3px;
+    font-size: 13px;
+  }
+
+  .modal-list {
+    margin-top: 20px;
+  }
+
+  .modal-list-item {
+    margin-bottom: 5px;
+  }
+
+  .close-button {
+    top: -57px;
+    left: 621px;
+  }
+
+  /* Реализация пагинации для 768px*/
+
+  .all-pets-content {
+    width: 768px;
+  }
+
+  .pets-content {
+    margin: 30px 0 40px;
+    width: 768px;
+    justify-content: center;
+  }
+
+  .pet-card {
+    margin: 15px 20px;
   }
 }
 
@@ -152,7 +337,7 @@
 
 @media only screen and (max-width: 767px) {
   .pets {
-    padding: 42px 10px;
+    padding: 42px 0px;
   }
 
   .pets-title {
@@ -161,11 +346,8 @@
     line-height: 32.5px;
   }
 
-  .pets-content {
-    margin-top: 42px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  .pet-card:hover {
+    transform: scale(1.04);
   }
 
   .pet-card-title {
@@ -191,5 +373,63 @@
   .pets-navigation {
     margin: 10px auto 0;
     width: 300px;
+  }
+
+  .modal-window {
+    width: 240px;
+    padding-bottom: 10px;
+    height: auto;
+    transform: translate(-50%, -50%);
+  }
+
+  .modal-img {
+    display: none;
+  }
+
+  .modal-content {
+    margin-top: 10px;
+    width: 220px;
+    margin-left: 10px;
+    padding-bottom: 0px;
+  }
+
+  .modal-name {
+    text-align: center;
+  }
+
+  .modal_type {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .modal-breed {
+    color: #000000;
+  }
+
+  .modal-description {
+    margin-top: 20px;
+    line-height: 14.3px;
+    font-size: 13px;
+    text-align: justify;
+  }
+
+  .close-button {
+    top: -57px;
+    left: 215px;
+  }
+
+  /* Реализация пагинации для 320px*/
+
+  .all-pets-content {
+    width: 320px;
+  }
+
+  .pets-content {
+    margin: 42px 0;
+    width: 320px;
+  }
+
+  .pet-card {
+    margin: 15px 0px;
   }
 }

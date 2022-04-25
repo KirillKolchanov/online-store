@@ -4,7 +4,13 @@
 @import url("./footer.css");
 
 body {
+
+  position: relative;
   overflow-x: hidden;
+}
+
+.body_no_scroll {
+  overflow-y: hidden;
 }
 
 .wrapper {
@@ -44,6 +50,25 @@ p {
   font-size: 15px;
   font-family: Arial;
   font-weight: 400;
+}
+
+.opacity-window {
+  visibility: hidden;
+  background: rgba(41, 41, 41, 0.6);;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.opacity-window_active {
+  visibility: visible;
+}
+
+.opacity-window_active:hover {
+  cursor: pointer;
 }
 
 /*_____________________ Адаптив для 768px _____________________*/
