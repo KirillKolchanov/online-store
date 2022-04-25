@@ -152,7 +152,6 @@ twoArrowRight.addEventListener('click', function() {
     currentSlide = 16;
   }
 
-
   petsContentArr.forEach((el) => {
     el.style.left = `${sliderOffset}px`;
 
@@ -174,7 +173,6 @@ arrowLeft.addEventListener('click', function() {
     if (currentSlide < 6 && arrowRight.hasAttribute("disabled")) {
       activateArrowRight();
       activateTwoArrowRight();
-
     }
 
     if (currentSlide === 1) {
@@ -190,7 +188,6 @@ arrowLeft.addEventListener('click', function() {
     if (currentSlide < 8 && arrowRight.hasAttribute("disabled")) {
       activateArrowRight();
       activateTwoArrowRight();
-
     }
 
     if (currentSlide === 1) {
@@ -215,10 +212,8 @@ arrowLeft.addEventListener('click', function() {
     }
   }
 
-
   petsContentArr.forEach((el) => {
     el.style.left = `${sliderOffset}px`;
-
     petsNavNumber.firstChild.textContent = currentSlide;
   })
 
@@ -252,9 +247,7 @@ twoArrowLeft.addEventListener('click', function() {
   disableTwoArrowLeft()
   activateArrowRight();
   activateTwoArrowRight();
-
 })
-
 }
 
 export default paginationEngine;

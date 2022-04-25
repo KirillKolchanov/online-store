@@ -54,7 +54,6 @@ const sliderEngine = () => {
         item[i].firstElementChild.src = shuffledAllPets[i].img;
         item[i].children[1].textContent = shuffledAllPets[i].name;
       }
-      //console.log(shuffledAllPets);
     }
 
   const moveLeft = () => {
