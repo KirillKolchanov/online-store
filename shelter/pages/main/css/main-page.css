@@ -152,6 +152,10 @@ nav {
     padding: 30px 10px 0px;
   }
 
+  .logo-description {
+    line-height: 14.95px;
+  }
+
   header {
     width: 257px;
     display: flex;
@@ -164,15 +168,15 @@ nav {
   nav {
     margin-top: 0;
     width: 320px;
-    height: 327px;
     padding: 158px 10px 248px;
     position: fixed;
     right: -200%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     background-color: #292929;
     top: 90px;
+    height: 100%;
 
     transition: all 0.5s ease-in-out;
   }
@@ -230,7 +234,7 @@ nav {
 
   .header_active {
     width: 257px;
-    padding: 30px 53px 10px 10px;
+    padding: 30px 53px 30px 10px;
     position: fixed;
     top: 0;
     right: 0;
@@ -240,15 +244,16 @@ nav {
   }
 
   .nav_active {
-    top: 90px;
+    top: 120px;
     right: 0;
     padding: 148px 0 199px;
     z-index: 10;
-
+    justify-content: flex-start;
     transition: all 0.5s ease-in-out;
   }
 
   .nav_active .nav-text {
+    margin-bottom: 40px;
     font-size: 32px;
     line-height: 51.2px;
     text-align: center;

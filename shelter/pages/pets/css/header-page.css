@@ -95,25 +95,28 @@ nav {
   nav {
     margin-top: 0;
     width: 320px;
-    height: 327px;
-    padding: 158px 10px 248px;
     position: fixed;
     right: -200%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    background-color: #292929;
-    top: 90px;
+    background-color: #FFFFFF;
+    top: 120px;
+    padding: 128px 0px 199px;
+    height: 100%;
+    justify-content: flex-start;
 
     transition: all 0.5s ease-in-out;
   }
 
   .nav-text {
     text-decoration: none;
-    color: #CDCDCD;
     font-family: Arial;
     font-weight: 400;
     line-height: 24px;
+    font-size: 32px;
+    line-height: 51.2px;
+    text-align: center;
+    margin-bottom: 40px;
   }
 
   .burger-menu {
@@ -138,47 +141,18 @@ nav {
     transition: transform 0.5s ease;
   }
 
-  .burger-line_active {
-    background-color: #F1CDB3;
-  }
-
-  .logo-title_active {
-    color: #F1CDB3;
-  }
-
-  .logo-description_active {
-    color: #FFFFFF;
-  }
-
   .header_active {
     width: 257px;
-    padding: 30px 53px 10px 10px;
+    padding: 30px 53px 30px 10px;
     position: fixed;
     top: 0;
     right: 0;
     align-items: center;
-    background-color: #292929;
+
   }
 
   .nav_active {
-    top: 90px;
     right: 0;
-    padding: 148px 0 199px;
-
-    transition: all 0.5s ease-in-out;
-  }
-
-  .nav_active .nav-text {
-    font-size: 32px;
-    line-height: 51.2px;
-    text-align: center;
-  }
-
-  .nav-text.nav-text_active {
-    color: #FAFAFA;
-  }
-
-  .nav-text_hover:hover {
-    color: #FAFAFA;
+    height: 100%;
   }
 }

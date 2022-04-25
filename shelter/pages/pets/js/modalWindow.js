@@ -24,6 +24,7 @@ const closeButton = document.querySelector(".close-button");
 
 const modalWindowEngine = () => {
   for (let petCard of petCards) {
+
     petCard.addEventListener('click', function() {
 
       header.style.zIndex = "1";

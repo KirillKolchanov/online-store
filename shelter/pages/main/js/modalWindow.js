@@ -1,6 +1,8 @@
 import allPets from '../../../assets/pets.js';
 
-const body = document.querySelector("body");
+const modalWindowEngine = () => {
+
+  const body = document.querySelector("body");
 
   const opacityWindow = document.querySelector(".opacity-window");
 
@@ -20,8 +22,6 @@ const body = document.querySelector("body");
   const modalListParasites = document.querySelector(".modal-parasites");
 
   const closeButton = document.querySelector(".close-button");
-
-const modalWindowEngine = () => {
 
   for (let petCard of petCards) {
     petCard.addEventListener('click', function() {

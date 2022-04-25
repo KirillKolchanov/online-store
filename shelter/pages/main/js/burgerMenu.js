@@ -13,7 +13,7 @@ const navContact = document.querySelector(".nav-contact");
 const burgerEngine = () => {
 
   burgerMenu.addEventListener('click', function() {
-    body.classList.add("body_no_scroll");
+    body.classList.toggle("body_no_scroll");
     burgerMenu.classList.toggle("burger-menu_active");
     header.classList.toggle("header_active");
     nav.classList.toggle("nav_active");
@@ -34,7 +34,13 @@ const burgerEngine = () => {
   navContact.addEventListener('click', closeBurgerMenu);
 
   opacityWindow.addEventListener('click', function() {
+
     burgerMenu.classList.remove("burger-menu_active");
+    header.classList.remove("header_active");
+    nav.classList.remove("nav_active");
+
+    opacityWindow.classList.remove("opacity-window_active");
+    body.classList.remove("body_no_scroll");
   })
 }
 

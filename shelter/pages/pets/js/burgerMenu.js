@@ -17,24 +17,11 @@ const burgerEngine = () => {
 
   burgerMenu.addEventListener('click', function() {
 
-    body.classList.add("body_no_scroll");
-
+    body.classList.toggle("body_no_scroll");
     burgerMenu.classList.toggle("burger-menu_active");
     header.classList.toggle("header_active");
     nav.classList.toggle("nav_active");
-
     opacityWindow.classList.toggle("opacity-window_active");
-
-    for (let burgerEachLine of burgerLines) {
-      burgerEachLine.classList.toggle("burger-line_active")
-    }
-    logoTitle.classList.toggle("logo-title_active");
-    logoDescription.classList.toggle("logo-description_active");
-    navTextActive.classList.toggle("nav-text_active");
-
-    for (let navText of navTexts) {
-      navText.classList.add("nav-text_hover")
-    }
 
     navPets.addEventListener('click', function() {
       burgerMenu.classList.remove("burger-menu_active");
@@ -42,13 +29,6 @@ const burgerEngine = () => {
       nav.classList.remove("nav_active");
 
       opacityWindow.classList.remove("opacity-window_active");
-
-      for (let burgerEachLine of burgerLines) {
-        burgerEachLine.classList.remove("burger-line_active")
-      }
-      logoTitle.classList.remove("logo-title_active");
-      logoDescription.classList.remove("logo-description_active");
-      navTextActive.classList.remove("nav-text_active");
 
       body.classList.remove("body_no_scroll");
     })
@@ -59,25 +39,13 @@ const burgerEngine = () => {
       nav.classList.remove("nav_active");
       opacityWindow.classList.remove("opacity-window_active");
 
-      for (let burgerEachLine of burgerLines) {
-        burgerEachLine.classList.remove("burger-line_active")
-      }
-      logoTitle.classList.remove("logo-title_active");
-      logoDescription.classList.remove("logo-description_active");
-      navTextActive.classList.remove("nav-text_active");
-
       body.classList.remove("body_no_scroll");
     })
   });
 
   opacityWindow.addEventListener('click', function() {
 
-    for (let burgerEachLine of burgerLines) {
-      burgerEachLine.classList.remove("burger-line_active")
-    }
-    logoTitle.classList.remove("logo-title_active");
     logoDescription.classList.remove("logo-description_active");
-    navTextActive.classList.remove("nav-text_active");
 
     burgerMenu.classList.remove("burger-menu_active");
     header.classList.remove("header_active");

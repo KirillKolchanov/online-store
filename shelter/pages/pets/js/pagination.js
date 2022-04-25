@@ -82,17 +82,47 @@ arrowRight.addEventListener('click', function() {
   if (document.documentElement.clientWidth >= 1280){
     sliderOffset = sliderOffset - 1280
     currentSlide += 1;
+
+    if (currentSlide === 6) {
+      disableArrowRight();
+      disableTwoArrowRight();
+    }
+
+    if (currentSlide > 1) {
+      activateArrowLeft();
+      activateTwoArrowLeft();
+    }
   }
   /* Для разрешения 768 */
   if (document.documentElement.clientWidth < 1280 && document.documentElement.clientWidth >= 768){
     sliderOffset = sliderOffset - 768
     currentSlide += 1;
+
+    if (currentSlide === 8) {
+      disableArrowRight();
+      disableTwoArrowRight();
+    }
+
+    if (currentSlide > 1) {
+      activateArrowLeft();
+      activateTwoArrowLeft();
+    }
   }
 
   /* Для разрешения 320 */
   if (document.documentElement.clientWidth < 768){
     sliderOffset = sliderOffset - 320
     currentSlide += 1;
+
+    if (currentSlide === 16) {
+      disableArrowRight();
+      disableTwoArrowRight();
+    }
+
+    if (currentSlide > 1) {
+      activateArrowLeft();
+      activateTwoArrowLeft();
+    }
   }
 
   petsContentArr.forEach((el) => {
@@ -101,15 +131,7 @@ arrowRight.addEventListener('click', function() {
     petsNavNumber.firstChild.textContent = currentSlide;
   })
 
-  if (currentSlide === 6) {
-    disableArrowRight();
-    disableTwoArrowRight();
-  }
 
-  if (currentSlide > 1) {
-    activateArrowLeft();
-    activateTwoArrowLeft();
-  }
 
 });
 
@@ -121,13 +143,13 @@ twoArrowRight.addEventListener('click', function() {
   }
   /* Для разрешения 768 */
   if (document.documentElement.clientWidth < 1280 && document.documentElement.clientWidth >= 768){
-    sliderOffset = -3840;
-    currentSlide = 6;
+    sliderOffset = -5376;
+    currentSlide = 8;
   }
   /* Для разрешения 320 */
   if (document.documentElement.clientWidth < 768){
-    sliderOffset = -1600;
-    currentSlide = 6;
+    sliderOffset = -4800;
+    currentSlide = 16;
   }
 
 
@@ -148,16 +170,49 @@ arrowLeft.addEventListener('click', function() {
   if (document.documentElement.clientWidth >= 1280){
     sliderOffset = sliderOffset + 1280
     currentSlide -= 1;
+
+    if (currentSlide < 6 && arrowRight.hasAttribute("disabled")) {
+      activateArrowRight();
+      activateTwoArrowRight();
+
+    }
+
+    if (currentSlide === 1) {
+      disableArrowLeft();
+      disableTwoArrowLeft()
+    }
   }
   /* Для разрешения 768 */
   if (document.documentElement.clientWidth < 1280 && document.documentElement.clientWidth >= 768){
     sliderOffset = sliderOffset + 768
     currentSlide -= 1;
+
+    if (currentSlide < 8 && arrowRight.hasAttribute("disabled")) {
+      activateArrowRight();
+      activateTwoArrowRight();
+
+    }
+
+    if (currentSlide === 1) {
+      disableArrowLeft();
+      disableTwoArrowLeft()
+    }
   }
   /* Для разрешения 320 */
   if (document.documentElement.clientWidth < 768){
     sliderOffset = sliderOffset + 320
     currentSlide -= 1;
+
+    if (currentSlide < 16 && arrowRight.hasAttribute("disabled")) {
+      activateArrowRight();
+      activateTwoArrowRight();
+
+    }
+
+    if (currentSlide === 1) {
+      disableArrowLeft();
+      disableTwoArrowLeft()
+    }
   }
 
 
@@ -166,17 +221,6 @@ arrowLeft.addEventListener('click', function() {
 
     petsNavNumber.firstChild.textContent = currentSlide;
   })
-
-  if (currentSlide < 6 && arrowRight.hasAttribute("disabled")) {
-    activateArrowRight();
-    activateTwoArrowRight();
-
-  }
-
-  if (currentSlide === 1) {
-    disableArrowLeft();
-    disableTwoArrowLeft()
-  }
 
 })
 
@@ -191,7 +235,7 @@ twoArrowLeft.addEventListener('click', function() {
     sliderOffset = 0;
     currentSlide = 1;
   }
-  /* Для разрешения 768 */
+  /* Для разрешения 320 */
   if (document.documentElement.clientWidth < 768){
     sliderOffset = 0;
     currentSlide = 1;
