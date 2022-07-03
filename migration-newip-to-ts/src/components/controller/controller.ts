@@ -1,20 +1,22 @@
+import { NewsResponse } from '../types/news';
+import { SourcesResponse } from '../types/source'
 import AppLoader from './appLoader';
 
 class AppController extends AppLoader {
-  getSources(callback) {
+  getSources(callback: (sources: SourcesResponse) => void) {
     super.getResp({
       endpoint: 'sources',
     }, callback);
     }
 
-    getNews(e, callback) {
-      let target = e.target;
-      const newsContainer = e.currentTarget;
+    getNews(e: Event, callback: (news: NewsResponse) => void) {
+      let target = e.target as Element | ParentNode | null;
+      const newsContainer = e.currentTarget as Element;
 
-      while (target !== newsContainer) {
-        if (target.classList.contains('source__item')) {
+      while (target && target !== newsContainer) {
+        if (target instanceof Element && target.classList.contains('source__item')) {
           const sourceId = target.getAttribute('data-source-id');
-          if (newsContainer.getAttribute('data-source') !== sourceId) {
+          if (sourceId && newsContainer?.getAttribute('data-source') !== sourceId) {
             newsContainer.setAttribute('data-source', sourceId);
             super.getResp({
               endpoint: 'everything',
@@ -25,6 +27,7 @@ class AppController extends AppLoader {
           }
           return;
         }
+
         target = target.parentNode;
       }
     }
