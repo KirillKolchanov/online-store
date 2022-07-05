@@ -1,5 +1,3 @@
-import { SourcesResponse } from './source';
-
 export interface LoaderOptions {
   apiKey: string;
 }
