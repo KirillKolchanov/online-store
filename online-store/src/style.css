@@ -1,6 +1,14 @@
 
 @import url("./components/css/reset.css");
 
+html {
+  overflow-x: hidden;
+}
+
+* {
+  color: rgb(99, 97, 97);
+}
+
 header {
   width: 100%;
   height: 200px;
@@ -18,15 +26,125 @@ header {
   height: 100px;
 }
 
+main {
+  background-color: rgba(240, 240, 240, 0.884);
+}
+
 .sorting {
+  padding-top: 20px;
   height: 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.sorting span {
+  margin-right: 10px;
+}
+
+.sorting-select {
+  margin-right: 70px;
+}
+
+.main-container {
+  padding: 10px 20px;
 }
 
 .filter-container {
-  border: 1px solid black;
+  padding-right: 0;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.filter-header {
+  margin-top: 20px;
+}
+
+.filter-button-logo {
+  width: 60px;
+}
+
+body h4 {
+  margin-top: 40px;
+}
+
+.name-buttons {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: auto;
+  gap: 15px;
+}
+
+.filter-fuel-list {
+  padding-left: 10px;
+}
+
+.checkbox-text {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.filter-fuel-item {
+  display: flex;
+  align-items: center;
+}
+
+input.filter-fuel-input {
+  margin-top: 0;
+}
+
+main .cars-container {
+  margin-top: 35px;
+  padding: 0 100px;
 }
 
 .cars-container {
-  height: 500px;
   border: 1px solid red;
+  display: flex;
+  gap: 95px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
+
+.cars-card {
+  background-color: white;
+  border-radius: 10px;
+  width: 345px;
+  padding-bottom: 20px;
+}
+
+.cars-card-title {
+  margin-top: 15px;
+}
+
+.cars-card-price-header {
+  margin-bottom: 5px;
+}
+
+.cars-card-price {
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+.cars-card-price-number {
+  color: black;
+}
+
+.bi-currency-dollar {
+  color: black;
+}
+
+.cars-card-description {
+  margin-top: 30px;
+}
+
+.cars-description {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+/*
+.cars-card-img img {
+  width: 200px;
+} */
