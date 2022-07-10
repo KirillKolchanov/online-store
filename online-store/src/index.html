@@ -4,9 +4,99 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css"> -->
+  <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <title>Luxary cars shop</title>
 </head>
 <body>
-
+  <header>
+    <div class="header-logo">
+      <img src="./assets/img/luxe-Cars-Logo-1000x1000-1.png" alt="">
+    </div>
+    <div class="shopping-cart"></div>
+  </header>
+  <main>
+    <div class="sorting"></div>
+    <div class="main-container row">
+      <div class="filter-container col-12 col-lg-3">
+        <h2 class="filter-header">Filter Results</h2>
+        <p class="filter-make-header">Make</p>
+        <button class="filter-make-button"></button>
+        <button class="filter-make-button"></button>
+        <button class="filter-make-button"></button>
+        <button class="filter-make-button"></button>
+        <button class="filter-make-button"></button>
+        <h4 class="filter-price-header">Price</h4>
+        <div class="filter-price-input">
+          <input type="text" placeholder="from" class="filter-price-input">
+        </div>
+        <div class="filter-price-input">
+          <input type="text" placeholder="to" class="filter-price-input">
+        </div>
+        <h4 class="filter-age-header">Age</h4>
+        <div class="filter-age">
+          <div class="filter-age-left">
+            <select class="filter-select-age">
+              <option value="Min"></option>
+              <option value="2022"></option>
+              <option value="2021"></option>
+              <option value="2020"></option>
+              <option value="2019"></option>
+              <option value="2018"></option>
+              <option value="2017"></option>
+              <option value="2016"></option>
+              <option value="2015"></option>
+            </select>
+          </div>
+          <div class="filter-age-right">
+            <select class="filter-select-age">
+              <option value="Max"></option>
+              <option value="2022"></option>
+              <option value="2021"></option>
+              <option value="2020"></option>
+              <option value="2019"></option>
+              <option value="2018"></option>
+              <option value="2017"></option>
+              <option value="2016"></option>
+              <option value="2015"></option>
+            </select>
+          </div>
+          <h4 class="filter-fuel-header">Fuel</h4>
+          <div class="filter-fuel">
+            <ul class="filter-fuel-list">
+              <li class="filter-fuel-item">
+                <label class="filter-fuel-label">
+                  <div class="filter-fuel-checkbox">
+                    <input type="checkbox" class="filter-fuel-input">
+                  </div>
+                  <div class="filter-fuel-text">Petrol</div>
+                </label>
+              </li>
+              <li class="filter-fuel-item">
+                <label class="filter-fuel-label">
+                  <div class="filter-fuel-checkbox">
+                    <input type="checkbox" class="filter-fuel-input">
+                  </div>
+                  <div class="filter-fuel-text">Diesel</div>
+                </label>
+              </li>
+              <li class="filter-fuel-item">
+                <label class="filter-fuel-label">
+                  <div class="filter-fuel-checkbox">
+                    <input type="checkbox" class="filter-fuel-input">
+                  </div>
+                  <div class="filter-fuel-text">Electro</div>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="cars-container col-12 col-lg-9"></div>
+    </div>
+  </main>
 </body>
 </html>
