@@ -11,10 +11,14 @@
 </head>
 <body>
   <header>
+    <div class="header-search row">
+      <i class="bi bi-search" style="font-size: 30px; color: white"></i>
+      <input type="text" class="form-control header-search-input" style="display: none">
+    </div>
     <div class="header-logo">
       <img src="./assets/img/luxe-Cars-Logo-1000x1000-1.png" alt="">
     </div>
-    <div class="shopping-cart"></div>
+    <i class="bi bi-bag-check" style="font-size: 50px; color: white"></i>
   </header>
   <main>
     <div class="sorting">
@@ -28,15 +32,16 @@
     </div>
     <div class="main-container row">
       <div class="filter-container col-12 col-lg-3">
-        <h2 class="filter-header filter-element">Filter Results</h2>
+        <h2 class="filter-header filter-element">Filters</h2>
         <h4 class="filter-make-header filter-element">Make</h4>
         <div class="name-buttons filter-element">
-          <button class="btn btn-outline-dark filter-make-button"><img class="filter-button-logo" src="./assets/img/merc-logo.png" alt=""></button>
-          <button class="btn btn-outline-dark filter-make-button"><img class="filter-button-logo" src="./assets/img/bmw-logo.png" alt=""></button>
-          <button class="btn btn-outline-dark filter-make-button"><img class="filter-button-logo" src="./assets/img/audi-logo.png" alt=""></button>
-          <button class="btn btn-outline-dark filter-make-button"><img class="filter-button-logo" src="./assets/img/ferrari-logo.png" alt=""></button>
-          <button class="btn btn-outline-dark filter-make-button"><img class="filter-button-logo" src="./assets/img/lamba-logo.png" alt=""></button>
-          <button class="btn btn-outline-dark filter-make-button"><img class="filter-button-logo" src="./assets/img/aston-logo.png" alt=""></button>
+          <button class="btn btn-outline-dark filter-make-button"><img class="filter-button-logo" src="./assets/img/make-logo/merc-logo.png" alt=""></button>
+          <button class="btn btn-outline-dark filter-make-button"><img class="filter-button-logo" src="./assets/img/make-logo/bmw-logo.png" alt=""></button>
+          <button class="btn btn-outline-dark filter-make-button"><img class="filter-button-logo" src="./assets/img/make-logo/audi-logo.png" alt=""></button>
+          <button class="btn btn-outline-dark filter-make-button"><img class="filter-button-logo" src="./assets/img/make-logo/ferrari-logo.png" alt=""></button>
+          <button class="btn btn-outline-dark filter-make-button"><img class="filter-button-logo" src="./assets/img/make-logo/lamba-logo.png" alt=""></button>
+          <button class="btn btn-outline-dark filter-make-button"><img class="filter-button-logo" src="./assets/img/make-logo/aston-logo.png" alt=""></button>
+          <button class="btn btn-outline-dark filter-make-button"><img class="filter-button-logo" src="./assets/img/make-logo/Porsche-Logo.png" alt=""></button>
         </div>
         <h4 class="filter-price-header">Price <i class="bi bi-currency-dollar"></i></h4>
         <div class="row filter-price-input">
@@ -93,10 +98,10 @@
           </div>
         </div>
       <div class="cars-container col-12 col-lg-9">
-        <!-- 1st card-->
+        <!-- 1st card
         <div class="cars-card">
           <div class="cars-card-img">
-            <img class="rounded" src="./assets/img/ferrari-488.jpeg" alt="">
+            <img class="rounded" src="./assets/img/cars/ferrari-488.jpeg" alt="">
           </div>
           <h6 class="cars-card-title text-center">Ferrari 488 Gtb 2dr Auto</h6>
           <div class="cars-card-price">
@@ -117,84 +122,10 @@
             </div>
           </div>
         </div>
-        <!--End of 1st card-->
-        <!-- 2nd card-->
-        <div class="cars-card">
-          <div class="cars-card-img">
-            <img class="rounded" src="./assets/img/ferrari-488.jpeg" alt="">
-          </div>
-          <h6 class="cars-card-title text-center">Ferrari 488 Gtb 2dr Auto</h6>
-          <div class="cars-card-price">
-            <h6 class="cars-card-price-header">Price</h6>
-            <h5 class="cars-card-price-number"><i class="bi bi-currency-dollar"></i> 200,000</h5>
-          </div>
-          <div class="cars-card-description">
-            <div class="cars-description">
-              <p class="cars-card-year"><i class="bi bi-calendar"></i> 2022</p>
-              <p class="cars-card-fuel"><i class="bi bi-droplet"></i> Petrol</p>
-            </div>
-            <div class="cars-description">
-              <p class="cars-card-miles"><i class="bi bi-speedometer2"></i> 18,000</p>
-              <p class="cars-card-city"><i class="bi bi-geo-alt"></i> Warsaw</p>
-            </div>
-            <div class="cars-card-submit text-center">
-              <button class="btn btn-outline-success cars-submit-button">Add to cart</button>
-            </div>
-          </div>
-        </div>
-        <!--End of 2nd card-->
-        <!-- 3rd card-->
-        <div class="cars-card">
-          <div class="cars-card-img">
-            <img class="rounded" src="./assets/img/ferrari-488.jpeg" alt="">
-          </div>
-          <h6 class="cars-card-title text-center">Ferrari 488 Gtb 2dr Auto</h6>
-          <div class="cars-card-price">
-            <h6 class="cars-card-price-header">Price</h6>
-            <h5 class="cars-card-price-number"><i class="bi bi-currency-dollar"></i> 200,000</h5>
-          </div>
-          <div class="cars-card-description">
-            <div class="cars-description">
-              <p class="cars-card-year"><i class="bi bi-calendar"></i> 2022</p>
-              <p class="cars-card-fuel"><i class="bi bi-droplet"></i> Petrol</p>
-            </div>
-            <div class="cars-description">
-              <p class="cars-card-miles"><i class="bi bi-speedometer2"></i> 18,000</p>
-              <p class="cars-card-city"><i class="bi bi-geo-alt"></i> Warsaw</p>
-            </div>
-            <div class="cars-card-submit text-center">
-              <button class="btn btn-outline-success cars-submit-button">Add to cart</button>
-            </div>
-          </div>
-        </div>
-        <!--End of 3rd card-->
-        <!-- 4rth card-->
-        <div class="cars-card">
-          <div class="cars-card-img">
-            <img class="rounded" src="./assets/img/ferrari-488.jpeg" alt="">
-          </div>
-          <h6 class="cars-card-title text-center">Ferrari 488 Gtb 2dr Auto</h6>
-          <div class="cars-card-price">
-            <h6 class="cars-card-price-header">Price</h6>
-            <h5 class="cars-card-price-number"><i class="bi bi-currency-dollar"></i> 200,000</h5>
-          </div>
-          <div class="cars-card-description">
-            <div class="cars-description">
-              <p class="cars-card-year"><i class="bi bi-calendar"></i> 2022</p>
-              <p class="cars-card-fuel"><i class="bi bi-droplet"></i> Petrol</p>
-            </div>
-            <div class="cars-description">
-              <p class="cars-card-miles"><i class="bi bi-speedometer2"></i> 18,000</p>
-              <p class="cars-card-city"><i class="bi bi-geo-alt"></i> Warsaw</p>
-            </div>
-            <div class="cars-card-submit text-center">
-              <button class="btn btn-outline-success cars-submit-button">Add to cart</button>
-            </div>
-          </div>
-        </div>
-        <!--End of 4rth card-->
-      </div>
+        End of 1st card-->
+
     </div>
   </main>
+  <script type="module" src="./index.js"></script>
 </body>
 </html>

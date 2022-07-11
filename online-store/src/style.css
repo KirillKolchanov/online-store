@@ -10,11 +10,13 @@ html {
 }
 
 header {
+  padding: 0 30px;
   width: 100%;
-  height: 200px;
+  height: 150px;
   background-color: dimgrey;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header-logo {
@@ -112,6 +114,12 @@ main .cars-container {
   border-radius: 10px;
   width: 345px;
   padding-bottom: 20px;
+}
+
+.cars-card-img {
+  height: 259px;
+  display: flex;
+  align-items: center;
 }
 
 .cars-card-title {
