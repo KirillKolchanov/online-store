@@ -58,16 +58,37 @@ main {
   border-radius: 5px;
 }
 
-.filter-header {
+.filters-title-container {
   margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filters-title-container button {
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.filter-price-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.filter-price-title-container button {
+  font-size: 12px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
 }
 
 .filter-button-logo {
   width: 60px;
-}
-
-body h4 {
-  margin-top: 40px;
 }
 
 .name-buttons {
@@ -76,6 +97,38 @@ body h4 {
   flex-wrap: nowrap;
   overflow: auto;
   gap: 15px;
+}
+
+.filter-age-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.filter-age-title-container button {
+  font-size: 12px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+}
+
+.filter-age-fuel-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.filter-age-fuel-container button {
+  font-size: 12px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
 }
 
 .filter-fuel-list {
@@ -95,6 +148,8 @@ body h4 {
 input.filter-fuel-input {
   margin-top: 0;
 }
+
+/* Все что связано с карточками */
 
 main .cars-container {
   margin-top: 35px;
