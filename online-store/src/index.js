@@ -33,12 +33,14 @@ const sortedArrFromMaxPrice = [...allCars.sort((a,b) => b.price - a.price)];
 const sortedArrNewest = [...allCars.sort((a,b) => b.age - a.age)];
 const sortedArrOldest = [...allCars.sort((a,b) => a.age - b.age)];
 
+// Генерация карт при загрузки страницы
 for (let i = 0; i < allCars.length; i++) {
   carsContainer.insertAdjacentHTML('beforeend', generateCard(sortedArrFromMinPrice[i]));
 }
 
 const sorting = document.querySelector(".form-control-sm");
 
+//Генерация карт при изменении сортировки
 sorting.addEventListener("change", () => {
   carsContainer.innerHTML = '';
   if (sorting.value === "Low to High") {
@@ -64,13 +66,4 @@ sorting.addEventListener("change", () => {
       carsContainer.insertAdjacentHTML('beforeend', generateCard(sortedArrOldest[i]));
     }
   }
-
 })
-
-// const priceInput = document.querySelector(".filter-price-input");
-
-// console.log(priceInput);
-
-// priceInput.addEventListener("input", () => {
-//   console.log(priceInput.value);
-// })

@@ -1,16 +1,16 @@
 const allCars = [
   {
-    img: './assets/img/cars/ferrari-488.jpeg',
+    img: './assets/img/cars/ferrari 488.jpeg',
     make: 'Ferrari',
-    model: '488 Gtb 2dr Auto',
-    price: 394.369,
-    age: 2020,
+    model: '488 GTB F1',
+    price: 213.861,
+    age: 2019,
     fuel: 'petrol',
-    miles: '2,274',
+    miles: '2,650',
     city: 'Warsaw'
   },
   {
-    img: './assets/img/cars/Mercedes.jpeg',
+    img: './assets/img/cars/mercedes sls.jpeg',
     make: 'Mercedes',
     model: 'SLS 63 AMG',
     price: 203.188,
@@ -38,6 +38,26 @@ const allCars = [
     fuel: 'petrol',
     miles: '19,025',
     city: 'Krakow'
+  },
+  {
+    img: './assets/img/cars/ferrari f12.jpeg',
+    make: 'Ferrari',
+    model: 'F12 Berlinetta 6.2',
+    price: 219.802,
+    age: 2015,
+    fuel: 'petrol',
+    miles: '19,600',
+    city: 'Paris'
+  },
+  {
+    img: './assets/img/cars/mercedes sls-old.jpeg',
+    make: 'Mercedes',
+    model: 'SLS 6.2 63 V8 AMG 2dr',
+    price: 172.252,
+    age: 2010,
+    fuel: 'petrol',
+    miles: '48,000',
+    city: 'Madrid'
   },
 ]
 

@@ -28,6 +28,19 @@ header {
   height: 100px;
 }
 
+.header-search:hover {
+  color: black;
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: 0.3s;
+}
+
+.header-cart:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: 0.3s;
+}
+
 main {
   background-color: rgba(240, 240, 240, 0.884);
 }
@@ -168,7 +181,15 @@ main .cars-container {
   background-color: white;
   border-radius: 10px;
   width: 345px;
+  height: 529px;
   padding-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.cars-card:hover {
+  cursor: pointer;
+  transform: scale(1.04);
+  transition: 0.3s;
 }
 
 .cars-card-img {
