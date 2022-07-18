@@ -1,14 +1,4 @@
-import allCars from './components/db-cars/cars.js';
-
-import header from './components/header-container/header.js';
-import sort from './components/sort-container/sort.js';
-import makeFilter from './components/filter-container/make/make-filter.js';
-import priceFilter from './components/filter-container/price/price-filter.js'
-import ageFilter from './components/filter-container/age/age-filter.js';
-import fuelFilter from './components/filter-container/fuel/fuel-filter.js';
-
-//import './style.css';
-
+import allCars from '../db-cars/cars';
 
 const carsContainer = document.querySelector(".cars-container");
 
@@ -59,27 +49,53 @@ function generateCard(obj) {
 </div>`
 }
 
-const sortedArrFromMinPrice = [...allCars.sort((a,b) => a.price - b.price)];
+const header = () => {
 
-// Сортировка карточек
-sort();
+// Реализация работы лупы в header
+const headerSearch = document.querySelector(".header-search");
+const headerSearchInput = document.querySelector(".header-search-input") as HTMLInputElement;
+const headerSearchTitle = document.querySelector(".header-search-title");
+const headerSearchClear = document.querySelector(".header-search-clear");
+const headerSearchIcon = document.querySelector(".bi-search");
 
-header();
+headerSearch.addEventListener("click", () => {
+  headerSearch.classList.remove("header-search-hover");
+  headerSearchIcon.classList.add("none");
+  headerSearchInput.classList.remove("none");
+  headerSearchTitle.classList.remove("none");
+  headerSearchClear.classList.remove("none");
+  headerSearchClear.classList.add("btn");
 
-// Реализация работы "reset all" в фильтрации
-const filterResetButton = document.querySelector(".filter-reset-button");
-filterResetButton.addEventListener("click", () => {
+  headerSearchInput.classList.add("form-control")
+  headerSearchInput.focus();
+})
+
+// Реализация работы поиска по странице
+headerSearchInput.addEventListener("input", (e) => {
   carsContainer.innerHTML = "";
+  const filteredCars = allCars.filter(car => ((car.make+car.model).toLowerCase()).includes((e.target as HTMLSelectElement).value.toLowerCase()));
+
+  for (let i = 0; i < filteredCars.length; i++) {
+    carsContainer.insertAdjacentHTML('beforeend', generateCard(filteredCars[i]));
+  }
+  addingToCart();
+
+  if (!carsContainer.innerHTML) {
+    carsContainer.innerHTML = `<h1 class="error-text">Nothing found!</h1>`;
+  }
+})
+
+headerSearchClear.addEventListener("click", () => {
+
+  headerSearchInput.value = "";
+  carsContainer.innerHTML = "";
+  const sortedArrFromMinPrice = [...allCars.sort((a,b) => a.price - b.price)];
+
   for (let i = 0; i < allCars.length; i++) {
     carsContainer.insertAdjacentHTML('beforeend', generateCard(sortedArrFromMinPrice[i]));
   }
   addingToCart();
 })
+}
 
-makeFilter();
-
-priceFilter();
-
-ageFilter();
-
-fuelFilter();
+export default header;

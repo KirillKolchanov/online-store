@@ -1,26 +1,26 @@
-import allCars from '../db-cars/cars.js';
+import allCars from '../db-cars/cars';
 
 const carsContainer = document.querySelector(".cars-container");
 
-function addingToCart () {
-// Реализация добавления элементов в корзину
-const cartCounter = document.querySelector(".cart-counter");
-const cardButtonsSubmit = document.querySelectorAll(".cars-submit-button");
+function addingToCart() {
+  // Реализация добавления элементов в корзину
+  const cartCounter = document.querySelector(".cart-counter");
+  const cardButtonsSubmit = document.querySelectorAll(".cars-submit-button");
 
-cartCounter.textContent = 0;
+  cartCounter.textContent = "0";
 
-cardButtonsSubmit.forEach(button => button.addEventListener("click", () => {
-  button.classList.toggle("btn-danger");
-  button.classList.toggle("btn-outline-success");
+  cardButtonsSubmit.forEach(button => button.addEventListener("click", () => {
+    button.classList.toggle("btn-danger");
+    button.classList.toggle("btn-outline-success");
 
-  if (button.classList.contains("btn-danger")) {
-    cartCounter.textContent = +cartCounter.textContent + 1;
-    button.textContent = "Remove from cart";
-  } else {
-    cartCounter.textContent = +cartCounter.textContent - 1;
-    button.textContent = "Add to cart";
-  }
-}))
+    if (button.classList.contains("btn-danger")) {
+      cartCounter.textContent = `${+cartCounter.textContent + 1}`;
+      button.textContent = "Remove from cart";
+    } else {
+      cartCounter.textContent = `${+cartCounter.textContent - 1}`;
+      button.textContent = "Add to cart";
+    }
+  }))
 }
 
 function generateCard(obj) {
@@ -61,7 +61,7 @@ const sort = () => {
       }
       addingToCart();
 
-      const sorting = document.querySelector(".form-control-sm");
+      const sorting = document.querySelector(".form-control-sm") as HTMLSelectElement;
 
       //Генерация карт при изменении сортировки
       sorting.addEventListener("change", () => {

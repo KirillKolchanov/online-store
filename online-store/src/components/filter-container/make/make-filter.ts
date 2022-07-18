@@ -1,23 +1,24 @@
-import allCars from '../../db-cars/cars.js';
+import allCars from '../../db-cars/cars';
 
 const carsContainer = document.querySelector(".cars-container");
+const sortedArrFromMinPrice = [...allCars.sort((a,b) => a.price - b.price)];
 
 function addingToCart() {
   // Реализация добавления элементов в корзину
   const cartCounter = document.querySelector(".cart-counter");
   const cardButtonsSubmit = document.querySelectorAll(".cars-submit-button");
 
-  cartCounter.textContent = 0;
+  cartCounter.textContent = "0";
 
   cardButtonsSubmit.forEach(button => button.addEventListener("click", () => {
     button.classList.toggle("btn-danger");
     button.classList.toggle("btn-outline-success");
 
     if (button.classList.contains("btn-danger")) {
-      cartCounter.textContent = +cartCounter.textContent + 1;
+      cartCounter.textContent = `${+cartCounter.textContent + 1}`;
       button.textContent = "Remove from cart";
     } else {
-      cartCounter.textContent = +cartCounter.textContent - 1;
+      cartCounter.textContent = `${+cartCounter.textContent - 1}`;
       button.textContent = "Add to cart";
     }
   }))
@@ -49,54 +50,24 @@ function generateCard(obj) {
 </div>`
 }
 
-const sortedArrFromMinPrice = [...allCars.sort((a,b) => a.price - b.price)];
-
-const fuelFilter = () => {
-  const filterFuelInputPetrol = document.querySelector(".filter-fuel-input-petrol");
-  const filterFuelInputDiesel = document.querySelector(".filter-fuel-input-diesel");
-  const filterFuelInputElectro = document.querySelector(".filter-fuel-input-electro");
-
-  filterFuelInputPetrol.addEventListener("change", () => {
-    if (filterFuelInputPetrol.checked) {
+const makeFilter = () => {
+  // Фильтрация карточек по изготовителю (нажатие на определенную кнопку)
+  const filterMakeButtons = document.querySelectorAll(".filter-make-button") as NodeListOf<HTMLButtonElement>;
+  filterMakeButtons.forEach(button => {
+    button.addEventListener("click", () => {
       carsContainer.innerHTML = "";
-      const filteredCars = allCars.filter(car => car.fuel === 'petrol')
+      const filteredCars = allCars.filter(car => car.make === button.value)
 
       for (let i = 0; i < filteredCars.length; i++) {
         carsContainer.insertAdjacentHTML('beforeend', generateCard(filteredCars[i]));
       }
-    }
-    addingToCart();
+      addingToCart();
+    })
   })
 
-  filterFuelInputDiesel.addEventListener("change", () => {
-    if (filterFuelInputDiesel.checked) {
-      carsContainer.innerHTML = "";
-      const filteredCars = allCars.filter(car => car.fuel === 'diesel')
-
-      for (let i = 0; i < filteredCars.length; i++) {
-        carsContainer.insertAdjacentHTML('beforeend', generateCard(filteredCars[i]));
-      }
-    }
-    addingToCart();
-  })
-
-  filterFuelInputElectro.addEventListener("change", () => {
-    if (filterFuelInputElectro.checked) {
-      carsContainer.innerHTML = "";
-      const filteredCars = allCars.filter(car => car.fuel === 'electro')
-
-      for (let i = 0; i < filteredCars.length; i++) {
-        carsContainer.insertAdjacentHTML('beforeend', generateCard(filteredCars[i]));
-      }
-    }
-    addingToCart();
-  })
-
-  const fuelResetButton = document.querySelector(".fuel-reset-button");
-  fuelResetButton.addEventListener("click", () => {
-    filterFuelInputPetrol.checked = false;
-    filterFuelInputDiesel.checked = false;
-    filterFuelInputElectro.checked = false;
+  // Нажатие на кнопку "reset" в фильтрации изготовителя
+  const makeResetButton = document.querySelector(".make-reset-button");
+  makeResetButton.addEventListener("click", () => {
     carsContainer.innerHTML = "";
     for (let i = 0; i < allCars.length; i++) {
       carsContainer.insertAdjacentHTML('beforeend', generateCard(sortedArrFromMinPrice[i]));
@@ -105,4 +76,4 @@ const fuelFilter = () => {
   })
 }
 
-export default fuelFilter;
+export default makeFilter;

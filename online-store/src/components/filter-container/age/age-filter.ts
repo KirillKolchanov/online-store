@@ -1,4 +1,4 @@
-import allCars from '../../db-cars/cars.js';
+import allCars from '../../db-cars/cars';
 
 const carsContainer = document.querySelector(".cars-container");
 
@@ -33,17 +33,17 @@ function addingToCart() {
   const cartCounter = document.querySelector(".cart-counter");
   const cardButtonsSubmit = document.querySelectorAll(".cars-submit-button");
 
-  cartCounter.textContent = 0;
+  cartCounter.textContent = "0";
 
   cardButtonsSubmit.forEach(button => button.addEventListener("click", () => {
     button.classList.toggle("btn-danger");
     button.classList.toggle("btn-outline-success");
 
     if (button.classList.contains("btn-danger")) {
-      cartCounter.textContent = +cartCounter.textContent + 1;
+      cartCounter.textContent = `${+cartCounter.textContent + 1}`;
       button.textContent = "Remove from cart";
     } else {
-      cartCounter.textContent = +cartCounter.textContent - 1;
+      cartCounter.textContent = `${+cartCounter.textContent - 1}`;
       button.textContent = "Add to cart";
     }
   }))
@@ -63,16 +63,16 @@ const filterCarsByAge = (min, max) => {
 const sortedArrFromMinPrice = [...allCars.sort((a,b) => a.price - b.price)];
 
 const ageFilter = () => {
-  let minAge = 2010;
-  let maxAge = 2022;
-  const filterSelectAgeMin = document.querySelector(".filter-select-age-min");
-  const filterSelectAgeMax = document.querySelector(".filter-select-age-max");
+  let minAge = '2010';
+  let maxAge = '2022';
+  const filterSelectAgeMin = document.querySelector(".filter-select-age-min") as HTMLSelectElement;
+  const filterSelectAgeMax = document.querySelector(".filter-select-age-max") as HTMLSelectElement;
 
   filterSelectAgeMin.addEventListener("change", (e) => {
     if (minAge === 'Min' ) {
-      minAge = 2010
+      minAge = '2010';
     } else {
-      minAge = e.target.value
+      minAge = (e.target as HTMLSelectElement).value.toString();
     }
 
     filterCarsByAge(minAge, maxAge)
@@ -80,9 +80,9 @@ const ageFilter = () => {
 
   filterSelectAgeMax.addEventListener("change", (e) => {
     if (maxAge === 'Max') {
-      maxAge = 2022
+      maxAge = '2022';
     } else {
-      maxAge = e.target.value
+      maxAge = (e.target as HTMLSelectElement).value.toString();
     }
 
     filterCarsByAge(minAge, maxAge)

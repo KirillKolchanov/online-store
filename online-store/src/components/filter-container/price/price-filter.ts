@@ -1,4 +1,4 @@
-import allCars from '../../db-cars/cars.js';
+import allCars from '../../db-cars/cars';
 
 const carsContainer = document.querySelector(".cars-container");
 
@@ -7,17 +7,17 @@ function addingToCart() {
   const cartCounter = document.querySelector(".cart-counter");
   const cardButtonsSubmit = document.querySelectorAll(".cars-submit-button");
 
-  cartCounter.textContent = 0;
+  cartCounter.textContent = "0";
 
   cardButtonsSubmit.forEach(button => button.addEventListener("click", () => {
     button.classList.toggle("btn-danger");
     button.classList.toggle("btn-outline-success");
 
     if (button.classList.contains("btn-danger")) {
-      cartCounter.textContent = +cartCounter.textContent + 1;
+      cartCounter.textContent = `${+cartCounter.textContent + 1}`;
       button.textContent = "Remove from cart";
     } else {
-      cartCounter.textContent = +cartCounter.textContent - 1;
+      cartCounter.textContent = `${+cartCounter.textContent - 1}`;
       button.textContent = "Add to cart";
     }
   }))
@@ -53,15 +53,15 @@ const sortedArrFromMinPrice = [...allCars.sort((a,b) => a.price - b.price)];
 
 const priceFilter = () => {
 // Реализация работы фильтрации по цене
-const filterPriceInputFrom = document.querySelector(".filter-price-input-from");
-const filterPriceInputTo = document.querySelector(".filter-price-input-to");
-const priceApplyButton = document.querySelector(".price-apply-button");
+const filterPriceInputFrom = document.querySelector(".filter-price-input-from") as HTMLInputElement;
+const filterPriceInputTo = document.querySelector(".filter-price-input-to") as HTMLInputElement;
+const priceApplyButton = document.querySelector(".price-apply-button") as HTMLInputElement;
 
 priceApplyButton.addEventListener("click", () => {
 
   if (filterPriceInputFrom.value && !filterPriceInputTo.value) {
     carsContainer.innerHTML = "";
-    const filteredCars = allCars.filter(car => +car.price.toString().split(".").join("") >= filterPriceInputFrom.value)
+    const filteredCars = allCars.filter(car => +car.price.toString().split(".").join("") >= Number(filterPriceInputFrom.value))
 
     for (let i = 0; i < filteredCars.length; i++) {
       carsContainer.insertAdjacentHTML('beforeend', generateCard(filteredCars[i]));
@@ -70,7 +70,7 @@ priceApplyButton.addEventListener("click", () => {
 
   if (!filterPriceInputFrom.value && filterPriceInputTo.value) {
     carsContainer.innerHTML = "";
-    const filteredCars = allCars.filter(car => +car.price.toString().split(".").join("") <= filterPriceInputTo.value)
+    const filteredCars = allCars.filter(car => +car.price.toString().split(".").join("") <= Number(filterPriceInputTo.value))
 
     for (let i = 0; i < filteredCars.length; i++) {
       carsContainer.insertAdjacentHTML('beforeend', generateCard(filteredCars[i]));
@@ -79,7 +79,7 @@ priceApplyButton.addEventListener("click", () => {
 
   if (filterPriceInputFrom.value && filterPriceInputTo.value) {
     carsContainer.innerHTML = "";
-    const filteredCars = allCars.filter(car => (+car.price.toString().split(".").join("") >= filterPriceInputFrom.value) && (+car.price.toString().split(".").join("") <= filterPriceInputTo.value));
+    const filteredCars = allCars.filter(car => +car.price.toString().split(".").join("") >= Number(filterPriceInputFrom.value) && +car.price.toString().split(".").join("") <= Number(filterPriceInputTo.value));
 
     for (let i = 0; i < filteredCars.length; i++) {
       carsContainer.insertAdjacentHTML('beforeend', generateCard(filteredCars[i]));

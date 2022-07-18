@@ -1,4 +1,14 @@
-import allCars from '../db-cars/cars.js';
+import allCars from './components/db-cars/cars';
+
+import header from './components/header-container/header';
+import sort from './components/sort-container/sort';
+import makeFilter from './components/filter-container/make/make-filter';
+import priceFilter from './components/filter-container/price/price-filter'
+import ageFilter from './components/filter-container/age/age-filter';
+import fuelFilter from './components/filter-container/fuel/fuel-filter';
+
+import './style.css';
+import 'bootstrap';
 
 const carsContainer = document.querySelector(".cars-container");
 
@@ -7,17 +17,17 @@ function addingToCart() {
   const cartCounter = document.querySelector(".cart-counter");
   const cardButtonsSubmit = document.querySelectorAll(".cars-submit-button");
 
-  cartCounter.textContent = 0;
+  cartCounter.textContent = "0";
 
   cardButtonsSubmit.forEach(button => button.addEventListener("click", () => {
     button.classList.toggle("btn-danger");
     button.classList.toggle("btn-outline-success");
 
     if (button.classList.contains("btn-danger")) {
-      cartCounter.textContent = +cartCounter.textContent + 1;
+      cartCounter.textContent = `${+cartCounter.textContent + 1}`;
       button.textContent = "Remove from cart";
     } else {
-      cartCounter.textContent = +cartCounter.textContent - 1;
+      cartCounter.textContent = `${+cartCounter.textContent - 1}`;
       button.textContent = "Add to cart";
     }
   }))
@@ -49,53 +59,27 @@ function generateCard(obj) {
 </div>`
 }
 
-const header = () => {
+const sortedArrFromMinPrice = [...allCars.sort((a,b) => a.price - b.price)];
 
-// Реализация работы лупы в header
-const headerSearch = document.querySelector(".header-search");
-const headerSearchInput = document.querySelector(".header-search-input");
-const headerSearchTitle = document.querySelector(".header-search-title");
-const headerSearchClear = document.querySelector(".header-search-clear");
-const headerSearchIcon = document.querySelector(".bi-search");
+// Сортировка карточек
+sort();
 
-headerSearch.addEventListener("click", () => {
-  headerSearch.classList.remove("header-search-hover");
-  headerSearchIcon.classList.add("none");
-  headerSearchInput.classList.remove("none");
-  headerSearchTitle.classList.remove("none");
-  headerSearchClear.classList.remove("none");
-  headerSearchClear.classList.add("btn");
+header();
 
-  headerSearchInput.classList.add("form-control")
-  headerSearchInput.focus();
-})
-
-// Реализация работы поиска по странице
-headerSearchInput.addEventListener("input", (e) => {
+// Реализация работы "reset all" в фильтрации
+const filterResetButton = document.querySelector(".filter-reset-button");
+filterResetButton.addEventListener("click", () => {
   carsContainer.innerHTML = "";
-  const filteredCars = allCars.filter(car => ((car.make+car.model).toLowerCase()).includes((e.target.value.toLowerCase())));
-
-  for (let i = 0; i < filteredCars.length; i++) {
-    carsContainer.insertAdjacentHTML('beforeend', generateCard(filteredCars[i]));
-  }
-  addingToCart();
-
-  if (!carsContainer.innerHTML) {
-    carsContainer.innerHTML = `<h1 class="error-text">Nothing found!</h1>`;
-  }
-})
-
-headerSearchClear.addEventListener("click", () => {
-
-  headerSearchInput.value = "";
-  carsContainer.innerHTML = "";
-  const sortedArrFromMinPrice = [...allCars.sort((a,b) => a.price - b.price)];
-
   for (let i = 0; i < allCars.length; i++) {
     carsContainer.insertAdjacentHTML('beforeend', generateCard(sortedArrFromMinPrice[i]));
   }
   addingToCart();
 })
-}
 
-export default header;
+makeFilter();
+
+priceFilter();
+
+ageFilter();
+
+fuelFilter();

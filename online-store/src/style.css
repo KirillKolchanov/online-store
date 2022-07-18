@@ -6,6 +6,8 @@
 @import './components/filter-container/age/age-filter.css';
 @import './components/filter-container/fuel/fuel-filter.css';
 @import './components/cars-container/cars-cards.css';
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import '../node_modules/bootstrap-icons/font/bootstrap-icons.css';
 
 html {
   overflow-x: hidden;
