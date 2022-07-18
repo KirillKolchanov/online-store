@@ -50,13 +50,16 @@ function generateCard(obj) {
 }
 
 const sortedArrFromMinPrice = [...allCars.sort((a,b) => a.price - b.price)];
+console.log(sortedArrFromMinPrice);
+
 const sortedArrFromMaxPrice = [...allCars.sort((a,b) => b.price - a.price)];
 const sortedArrNewest = [...allCars.sort((a,b) => b.age - a.age)];
 const sortedArrOldest = [...allCars.sort((a,b) => a.age - b.age)];
 
 const sort = () => {
       // Генерация карт при загрузки страницы
-      for (let i = 0; i < allCars.length; i++) {
+      carsContainer.innerHTML = "";
+      for (let i = 0; i < sortedArrFromMinPrice.length; i++) {
         carsContainer.insertAdjacentHTML('beforeend', generateCard(sortedArrFromMinPrice[i]));
       }
       addingToCart();

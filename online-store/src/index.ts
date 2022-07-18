@@ -59,22 +59,10 @@ function generateCard(obj) {
 </div>`
 }
 
-const sortedArrFromMinPrice = [...allCars.sort((a,b) => a.price - b.price)];
-
 // Сортировка карточек
 sort();
 
 header();
-
-// Реализация работы "reset all" в фильтрации
-const filterResetButton = document.querySelector(".filter-reset-button");
-filterResetButton.addEventListener("click", () => {
-  carsContainer.innerHTML = "";
-  for (let i = 0; i < allCars.length; i++) {
-    carsContainer.insertAdjacentHTML('beforeend', generateCard(sortedArrFromMinPrice[i]));
-  }
-  addingToCart();
-})
 
 makeFilter();
 
@@ -83,3 +71,14 @@ priceFilter();
 ageFilter();
 
 fuelFilter();
+
+// Реализация работы "reset all" в фильтрации
+const filterResetButton = document.querySelector(".filter-reset-button");
+const sortedArrFromMinPrice = [...allCars.sort((a,b) => a.price - b.price)];
+filterResetButton.addEventListener("click", () => {
+  carsContainer.innerHTML = "";
+  for (let i = 0; i < allCars.length; i++) {
+    carsContainer.insertAdjacentHTML('beforeend', generateCard(sortedArrFromMinPrice[i]));
+  }
+  addingToCart();
+})

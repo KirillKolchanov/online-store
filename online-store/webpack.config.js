@@ -8,7 +8,6 @@ const CopyPlugin = require('copy-webpack-plugin');
 
 const baseConfig = {
   entry: path.resolve(__dirname, './src/index.ts'),
-  // entry: './src/index.ts',
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, '../dist'),
