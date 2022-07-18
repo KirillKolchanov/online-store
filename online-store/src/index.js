@@ -7,6 +7,8 @@ import priceFilter from './components/filter-container/price/price-filter.js'
 import ageFilter from './components/filter-container/age/age-filter.js';
 import fuelFilter from './components/filter-container/fuel/fuel-filter.js';
 
+//import './style.css';
+
 
 const carsContainer = document.querySelector(".cars-container");
 
@@ -15,17 +17,17 @@ function addingToCart() {
   const cartCounter = document.querySelector(".cart-counter");
   const cardButtonsSubmit = document.querySelectorAll(".cars-submit-button");
 
-  cartCounter.textContent = 0;
+  cartCounter.textContent = "0";
 
   cardButtonsSubmit.forEach(button => button.addEventListener("click", () => {
     button.classList.toggle("btn-danger");
     button.classList.toggle("btn-outline-success");
 
     if (button.classList.contains("btn-danger")) {
-      cartCounter.textContent = +cartCounter.textContent + 1;
+      cartCounter.textContent = `${+cartCounter.textContent + 1}`;
       button.textContent = "Remove from cart";
     } else {
-      cartCounter.textContent = +cartCounter.textContent - 1;
+      cartCounter.textContent = `${+cartCounter.textContent - 1}`;
       button.textContent = "Add to cart";
     }
   }))
