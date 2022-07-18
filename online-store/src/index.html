@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+  <title>Luxary cars shop</title>
+</head>
+<body>
+
+  <header>
+    <div class="header-search header-search-hover">
+      <i class="bi bi-search" style="font-size: 30px; color: white"></i>
+      <p class="header-search-title none">Search cars:</p>
+      <div class="header-search-input-container">
+        <input type="text" class="header-search-input none">
+        <button class="header-search-clear btn-outline-danger none">X</button>
+      </div>
+    </div>
+    <div class="header-logo">
+      <img src="./assets/img/luxe-Cars-Logo-1000x1000-1.png" alt="">
+    </div>
+    <div class="header-cart"><i class="bi bi-bag" style="font-size: 40px; color: white"></i><span class="cart-counter">0</span></div>
+  </header>
+
+  <article>
+
+    <section class="sorting">
+      <span class="fs-5">Sort by</span>
+      <select class="form-control-sm sorting-select" aria-label="Dynamic Order Results Top Order By">
+        <option selected="selected" value="Low to High">Price - Low to High</option>
+        <option value="High to Low">Price - High to Low</option>
+        <option value="Newest First">Age - Newest First</option>
+        <option value="Oldest First">Age - Oldest First</option>
+      </select>
+    </section>
+
+    <div class="main-container row">
+      <section class="filter-container col-12 col-lg-3">
+        <div class="filters-title-container"><h2 class="filter-header filter-element">Filters</h2><button class="btn btn-outline-secondary filter-reset-button">reset all</button></div>
+        <div class="filter-make-title-container"><h4 class="filter-make-header filter-element">Make</h4><button class="btn btn-outline-secondary make-reset-button">reset</button></div>
+        <div class="name-buttons filter-element">
+          <button class="btn btn-outline-dark filter-make-button" value="Mercedes"><img class="filter-button-logo" src="./assets/img/make-logo/merc-logo.png" alt=""></button>
+          <button class="btn btn-outline-dark filter-make-button" value="BMW"><img class="filter-button-logo" src="./assets/img/make-logo/bmw-logo.png" alt=""></button>
+          <button class="btn btn-outline-dark filter-make-button" value="Audi"><img class="filter-button-logo" src="./assets/img/make-logo/audi-logo.png" alt=""></button>
+          <button class="btn btn-outline-dark filter-make-button" value="Ferrari"><img class="filter-button-logo" src="./assets/img/make-logo/ferrari-logo.png" alt=""></button>
+          <button class="btn btn-outline-dark filter-make-button" value="Lamborghini"><img class="filter-button-logo" src="./assets/img/make-logo/lamba-logo.png" alt=""></button>
+          <button class="btn btn-outline-dark filter-make-button" value="Aston Martin"><img class="filter-button-logo" src="./assets/img/make-logo/aston-logo.png" alt=""></button>
+          <button class="btn btn-outline-dark filter-make-button" value="Porsche"><img class="filter-button-logo" src="./assets/img/make-logo/Porsche-Logo.png" alt=""></button>
+        </div>
+        <div class="filter-price-title-container">
+          <h4 class="filter-price-header">Price <i class="bi bi-currency-dollar" style="color: rgb(99, 97, 97);"></i></h4>
+          <button class="btn btn-outline-secondary price-reset-button">reset</button>
+        </div>
+        <div class="filter-price">
+          <div class="filter-input">
+            <input type="text" placeholder="from" class="form-control filter-price-input filter-price-input-from">
+          </div>
+          <div class="filter-input">
+            <input type="text" placeholder="to" class="form-control filter-price-input filter-price-input-to">
+          </div>
+          <button class="btn price-apply-button btn-primary">apply</button>
+        </div>
+        <div class="filter-age-title-container">
+          <h4 class="filter-age-header">Age</h4>
+          <button class="btn btn-outline-secondary age-reset-button">reset</button>
+        </div>
+        <div class="filter-age row">
+          <div class="col-lg-5">
+            <select class="form-select filter-select-age filter-select-age-min">
+              <option value="Min">Min</option>
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+              <option value="2020">2020</option>
+              <option value="2019">2019</option>
+              <option value="2018">2018</option>
+              <option value="2017">2017</option>
+              <option value="2016">2016</option>
+              <option value="2015">2015</option>
+              <option value="2014">2014</option>
+              <option value="2013">2013</option>
+              <option value="2012">2012</option>
+              <option value="2011">2011</option>
+              <option value="2010">2010</option>
+            </select>
+          </div>
+          <div class="col-lg-5">
+            <select class="form-select filter-select-age filter-select-age-max">
+              <option value="Max">Max</option>
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+              <option value="2020">2020</option>
+              <option value="2019">2019</option>
+              <option value="2018">2018</option>
+              <option value="2017">2017</option>
+              <option value="2016">2016</option>
+              <option value="2015">2015</option>
+              <option value="2014">2014</option>
+              <option value="2013">2013</option>
+              <option value="2012">2012</option>
+              <option value="2011">2011</option>
+              <option value="2010">2010</option>
+            </select>
+          </div>
+        </div>
+        <div class="filter-age-fuel-container">
+          <h4 class="filter-fuel-header">Fuel</h4>
+          <button class="btn btn-outline-secondary fuel-reset-button">reset</button>
+        </div>
+          <div class="filter-fuel">
+            <ul class="filter-fuel-list">
+              <li class="filter-fuel-item">
+                <input type="radio" name="filter-radio" class="filter-fuel-input form-check-input filter-fuel-input-petrol"><span class="checkbox-text">Petrol</span>
+              </li>
+              <li class="filter-fuel-item">
+                <input type="radio" name="filter-radio" class="filter-fuel-input form-check-input filter-fuel-input-diesel"><span class="checkbox-text">Diesel</span>
+              </li>
+              <li class="filter-fuel-item">
+                <input type="radio" name="filter-radio" class="filter-fuel-input form-check-input filter-fuel-input-electro"><span class="checkbox-text">Electro</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+      </section>
+
+      <section class="cars-container col-12 col-lg-9">
+      </section>
+
+    </div>
+  </article>
+
+  <script type="module" src="./index.js"></script>
+</body>
+</html>

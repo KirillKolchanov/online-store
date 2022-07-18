@@ -1,0 +1,17 @@
+.filter-fuel-list {
+  padding-left: 10px;
+}
+
+.checkbox-text {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.filter-fuel-item {
+  display: flex;
+  align-items: center;
+}
+
+input.filter-fuel-input {
+  margin-top: 0;
+}
