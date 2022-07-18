@@ -1,0 +1,28 @@
+.filter-make-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.filter-make-title-container button {
+  font-size: 12px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+}
+
+.filter-button-logo {
+  width: 60px;
+}
+
+.name-buttons {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: auto;
+  gap: 15px;
+}

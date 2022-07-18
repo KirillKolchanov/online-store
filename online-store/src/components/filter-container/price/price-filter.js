@@ -1,12 +1,4 @@
-import allCars from './components/db-cars/cars.js';
-
-import header from './components/header-container/header.js';
-import sort from './components/sort-container/sort.js';
-import makeFilter from './components/filter-container/make/make-filter.js';
-import priceFilter from './components/filter-container/price/price-filter.js'
-import ageFilter from './components/filter-container/age/age-filter.js';
-import fuelFilter from './components/filter-container/fuel/fuel-filter.js';
-
+import allCars from '../../db-cars/cars.js';
 
 const carsContainer = document.querySelector(".cars-container");
 
@@ -59,25 +51,54 @@ function generateCard(obj) {
 
 const sortedArrFromMinPrice = [...allCars.sort((a,b) => a.price - b.price)];
 
-// Сортировка карточек
-sort();
+const priceFilter = () => {
+// Реализация работы фильтрации по цене
+const filterPriceInputFrom = document.querySelector(".filter-price-input-from");
+const filterPriceInputTo = document.querySelector(".filter-price-input-to");
+const priceApplyButton = document.querySelector(".price-apply-button");
 
-header();
+priceApplyButton.addEventListener("click", () => {
 
-// Реализация работы "reset all" в фильтрации
-const filterResetButton = document.querySelector(".filter-reset-button");
-filterResetButton.addEventListener("click", () => {
+  if (filterPriceInputFrom.value && !filterPriceInputTo.value) {
+    carsContainer.innerHTML = "";
+    const filteredCars = allCars.filter(car => +car.price.toString().split(".").join("") >= filterPriceInputFrom.value)
+
+    for (let i = 0; i < filteredCars.length; i++) {
+      carsContainer.insertAdjacentHTML('beforeend', generateCard(filteredCars[i]));
+    }
+  }
+
+  if (!filterPriceInputFrom.value && filterPriceInputTo.value) {
+    carsContainer.innerHTML = "";
+    const filteredCars = allCars.filter(car => +car.price.toString().split(".").join("") <= filterPriceInputTo.value)
+
+    for (let i = 0; i < filteredCars.length; i++) {
+      carsContainer.insertAdjacentHTML('beforeend', generateCard(filteredCars[i]));
+    }
+  }
+
+  if (filterPriceInputFrom.value && filterPriceInputTo.value) {
+    carsContainer.innerHTML = "";
+    const filteredCars = allCars.filter(car => (+car.price.toString().split(".").join("") >= filterPriceInputFrom.value) && (+car.price.toString().split(".").join("") <= filterPriceInputTo.value));
+
+    for (let i = 0; i < filteredCars.length; i++) {
+      carsContainer.insertAdjacentHTML('beforeend', generateCard(filteredCars[i]));
+    }
+  }
+  addingToCart();
+})
+
+// Нажатие на кнопку "reset" в фильтрации цены
+const priceResetButton = document.querySelector(".price-reset-button");
+priceResetButton.addEventListener("click", () => {
   carsContainer.innerHTML = "";
+  filterPriceInputFrom.value = "";
+  filterPriceInputTo.value = "";
   for (let i = 0; i < allCars.length; i++) {
     carsContainer.insertAdjacentHTML('beforeend', generateCard(sortedArrFromMinPrice[i]));
   }
   addingToCart();
 })
+}
 
-makeFilter();
-
-priceFilter();
-
-ageFilter();
-
-fuelFilter();
+export default priceFilter;

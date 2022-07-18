@@ -1,14 +1,7 @@
-import allCars from './components/db-cars/cars.js';
-
-import header from './components/header-container/header.js';
-import sort from './components/sort-container/sort.js';
-import makeFilter from './components/filter-container/make/make-filter.js';
-import priceFilter from './components/filter-container/price/price-filter.js'
-import ageFilter from './components/filter-container/age/age-filter.js';
-import fuelFilter from './components/filter-container/fuel/fuel-filter.js';
-
+import allCars from '../../db-cars/cars.js';
 
 const carsContainer = document.querySelector(".cars-container");
+const sortedArrFromMinPrice = [...allCars.sort((a,b) => a.price - b.price)];
 
 function addingToCart() {
   // Реализация добавления элементов в корзину
@@ -57,27 +50,30 @@ function generateCard(obj) {
 </div>`
 }
 
-const sortedArrFromMinPrice = [...allCars.sort((a,b) => a.price - b.price)];
+const makeFilter = () => {
+  // Фильтрация карточек по изготовителю (нажатие на определенную кнопку)
+  const filterMakeButtons = document.querySelectorAll(".filter-make-button");
+  filterMakeButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      carsContainer.innerHTML = "";
+      const filteredCars = allCars.filter(car => car.make === button.value)
 
-// Сортировка карточек
-sort();
+      for (let i = 0; i < filteredCars.length; i++) {
+        carsContainer.insertAdjacentHTML('beforeend', generateCard(filteredCars[i]));
+      }
+      addingToCart();
+    })
+  })
 
-header();
+  // Нажатие на кнопку "reset" в фильтрации изготовителя
+  const makeResetButton = document.querySelector(".make-reset-button");
+  makeResetButton.addEventListener("click", () => {
+    carsContainer.innerHTML = "";
+    for (let i = 0; i < allCars.length; i++) {
+      carsContainer.insertAdjacentHTML('beforeend', generateCard(sortedArrFromMinPrice[i]));
+    }
+    addingToCart();
+  })
+}
 
-// Реализация работы "reset all" в фильтрации
-const filterResetButton = document.querySelector(".filter-reset-button");
-filterResetButton.addEventListener("click", () => {
-  carsContainer.innerHTML = "";
-  for (let i = 0; i < allCars.length; i++) {
-    carsContainer.insertAdjacentHTML('beforeend', generateCard(sortedArrFromMinPrice[i]));
-  }
-  addingToCart();
-})
-
-makeFilter();
-
-priceFilter();
-
-ageFilter();
-
-fuelFilter();
+export default makeFilter;

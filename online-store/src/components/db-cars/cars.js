@@ -25,7 +25,7 @@ const allCars = [
     model: 'DBS V12 Superleggera',
     price: 298.638,
     age: 2022,
-    fuel: 'petrol',
+    fuel: 'electro',
     miles: 205,
     city: 'London'
   },
@@ -45,7 +45,7 @@ const allCars = [
     model: 'F12 Berlinetta 6.2',
     price: 219.802,
     age: 2015,
-    fuel: 'petrol',
+    fuel: 'diesel',
     miles: '19,600',
     city: 'Paris'
   },
