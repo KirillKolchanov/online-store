@@ -26,7 +26,7 @@ const allCars = [
     price: 298.638,
     age: 2022,
     fuel: 'electro',
-    miles: 205,
+    miles: '205',
     city: 'London'
   },
   {

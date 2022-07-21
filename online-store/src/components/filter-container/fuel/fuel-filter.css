@@ -15,3 +15,7 @@
 input.filter-fuel-input {
   margin-top: 0;
 }
+
+.fuel-reset-button {
+  margin-right: 15px;
+}

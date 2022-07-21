@@ -17,6 +17,7 @@
   align-items: center;
   justify-content: center;
   width: 45px;
+  margin-right: 15px;
 }
 
 .filter-price {
@@ -27,5 +28,5 @@
 }
 
 .filter-price .filter-input {
-  width: 150px;
+  width: 120px;
 }
