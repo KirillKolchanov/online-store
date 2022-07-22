@@ -1,3 +1,9 @@
+// Для выполнения задачи использовались сайты в качестве примера:
+// https://www.dicklovett.co.uk/used-cars
+// https://www.hrowen.co.uk/approved-used/?COGManufacturer=MERCEDES-BENZ
+// https://www.theaa.com/used-cars/displaycars?fullpostcode=&sortby=closest&pricefrom=0&priceto=1000000&old-mymakeid=125&classid=110
+// https://www.amarisupercars.com/for-sale
+
 import allCars from './components/db-cars/cars';
 
 import header from './components/header-container/header';

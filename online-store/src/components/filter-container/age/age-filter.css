@@ -1,3 +1,7 @@
+.filter-age.row {
+  margin-top: 10px;
+}
+
 .filter-age-title-container {
   display: flex;
   justify-content: space-between;

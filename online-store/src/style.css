@@ -33,6 +33,7 @@ article {
   padding-right: 0;
   background-color: white;
   border-radius: 5px;
+  height: 750px;
 }
 
 .filters-title-container {
@@ -47,4 +48,32 @@ article {
   display: flex;
   align-items: center;
   margin-right: 15px;
+}
+
+.footer {
+  position: relative;
+  bottom: 0px;
+  height: 75px;
+  background-color: #343a40;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rs-school-logo {
+  height: 50px;
+}
+
+.github-logo {
+  vertical-align: middle;
+}
+
+.rs-school-title {
+  font-weight: 400;
+  color: #f8f9fa;
+  white-space: nowrap;
+}
+
+.github-logo {
+  height: 70px;
 }

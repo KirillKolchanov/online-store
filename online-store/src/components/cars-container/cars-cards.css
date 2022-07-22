@@ -8,6 +8,7 @@ article .cars-container {
   gap: 95px;
   justify-content: flex-start;
   flex-wrap: wrap;
+  margin-bottom: 40px;
 }
 
 .error-text {
