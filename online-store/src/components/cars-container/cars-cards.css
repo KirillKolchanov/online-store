@@ -1,0 +1,69 @@
+article .cars-container {
+  margin-top: 35px;
+  padding: 0 100px;
+}
+
+.cars-container {
+  display: flex;
+  gap: 95px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.error-text {
+  margin: 0 auto;
+  color: red;
+}
+
+.cars-card {
+  background-color: white;
+  border-radius: 10px;
+  width: 345px;
+  height: 529px;
+  padding-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.cars-card:hover {
+  cursor: pointer;
+  transform: scale(1.04);
+  transition: 0.3s;
+}
+
+.cars-card-img {
+  height: 259px;
+  display: flex;
+  align-items: center;
+}
+
+.cars-card-title {
+  margin-top: 15px;
+}
+
+.cars-card-price-header {
+  margin-bottom: 5px;
+}
+
+.cars-card-price {
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+.cars-card-price-number {
+  color: black;
+}
+
+.bi-currency-dollar {
+  color: black;
+}
+
+.cars-card-description {
+  margin-top: 30px;
+}
+
+.cars-description {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}

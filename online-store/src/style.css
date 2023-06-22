@@ -1,0 +1,79 @@
+@import url("./components/css/reset.css");
+@import './components/header-container/header.css';
+@import './components/sort-container/sort.css';
+@import './components/filter-container/make/make-filter.css';
+@import './components/filter-container/price/price-filter.css';
+@import './components/filter-container/age/age-filter.css';
+@import './components/filter-container/fuel/fuel-filter.css';
+@import './components/cars-container/cars-cards.css';
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import '../node_modules/bootstrap-icons/font/bootstrap-icons.css';
+
+html {
+  overflow-x: hidden;
+}
+
+* {
+  color: rgb(99, 97, 97);
+}
+
+.none {
+  display: none;
+}
+
+article {
+  background-color: rgba(240, 240, 240, 0.884);
+}
+
+.main-container {
+  padding: 10px 20px;
+}
+
+.filter-container {
+  padding-right: 0;
+  background-color: white;
+  border-radius: 5px;
+  height: 750px;
+}
+
+.filters-title-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filters-title-container button {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.footer {
+  position: relative;
+  bottom: 0px;
+  height: 75px;
+  background-color: #343a40;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rs-school-logo {
+  height: 50px;
+}
+
+.github-logo {
+  vertical-align: middle;
+}
+
+.rs-school-title {
+  font-weight: 400;
+  color: #f8f9fa;
+  white-space: nowrap;
+}
+
+.github-logo {
+  height: 70px;
+}

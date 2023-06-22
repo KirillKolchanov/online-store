@@ -1,0 +1,36 @@
+.filter-age.row {
+  margin-top: 10px;
+}
+
+.filter-age-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.filter-age-title-container button {
+  font-size: 12px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  margin-right: 15px;
+}
+
+.filter-age-fuel-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.filter-age-fuel-container button {
+  font-size: 12px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+}
